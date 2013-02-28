@@ -1,0 +1,250 @@
+<?xml version="1.0"?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD with OASIS Tables v1.0 20120330//EN" "JATS-journalpublishing-oasis-article1.dtd">
+<article article-type="cstory"  xmlns:xlink="http://www.w3.org/1999/xlink">
+<front>
+    <journal-meta>
+        <journal-id journal-id-type="publisher">scibx</journal-id>
+        <journal-title-group><journal-title>Science-Business eXchange</journal-title></journal-title-group>
+        <issn pub-type="ppub">1945-3477</issn>
+        <issn pub-type="epub">1945-3477</issn>
+        <publisher><publisher-name>Nature Publishing Group</publisher-name></publisher>
+    </journal-meta>
+    <article-meta>
+        <article-id pub-id-type="doi">10.1038/scibx.2010.940</article-id>
+        <article-id pub-id-type="publisher-id">scibx.2010.940</article-id>
+        <article-categories>
+            <subj-group subj-group-type="category">
+                <subject>cstory</subject>
+            </subj-group>
+            <subj-group subj-group-type="subjects">
+            <subject content-type="subject">scibx-14</subject>
+            </subj-group>
+            <subj-group subj-group-type="indications">
+                <subject>Tuberculosis (TB)</subject>
+            </subj-group>
+        </article-categories>
+        <title-group>
+            <article-title>Resolving the PPAR<sub>&#x3B3;</sub> paradox</article-title>
+            <alt-title>New antidiabetic mechanism of PPAR<sub>&#x3B3;</sub> agonists</alt-title>
+        </title-group>
+        <contrib-group>
+            <contrib contrib-type="author">
+                <name>
+                <surname>Cain</surname>
+                <given-names>Chris</given-names>
+            </name>
+                <role>Staff Writer</role>
+            </contrib>
+        </contrib-group>
+        <pub-date pub-type="issue-date">
+            <day>12</day>
+            <month>08</month>
+            <year>2010</year>
+        </pub-date>
+        <volume>3</volume>
+        <issue>31</issue>
+        <permissions><copyright-year>2010</copyright-year><copyright-holder>Nature Publishing Group</copyright-holder></permissions>
+        <related-article related-article-type="see-also" xlink:href="scibx.2010.954" ext-link-type="article-id"/>
+        <abstract abstract-type="editor">
+            <p>Dana-Farber and Scripps Florida scientists have identified an alternative mechanism by which PPAR<sub>&#x3B3;</sub> agonists could exert their antidiabetic effects. The findings provide a rationale for a renewed look at compounds previously dismissed due to poor agonist activity but that now may offer therapeutic benefits with the potential for fewer side effects than marketed PPAR<sub>&#x3B3;</sub> agonists.</p>
+        </abstract>
+        <kwd-group>
+            <kwd>peroxisome proliferation&#x2013;activated receptor-&#x3B3;</kwd>
+				<kwd>PPARG</kwd>
+				<kwd>PPAR<sub>&#x3B3;</sub></kwd>
+				<kwd>insulin</kwd>
+				<kwd>INT131</kwd>
+				<kwd>Avandia rosiglitazone</kwd>
+				<kwd>Actos pioglitazone</kwd>
+				<kwd>thiazolidinedione</kwd>
+				<kwd>TZD</kwd>
+				<kwd>cyclin dependent kinase 5</kwd>
+				<kwd>CDK<sup>5</sup></kwd>
+				<kwd>adiponectin</kwd>
+				<kwd>glucose</kwd>
+				<kwd>MBX-102</kwd>
+				<kwd>Balaglitazone</kwd>
+				<kwd>DRF 2593</kwd>
+				<kwd>Dana-Farber Cancer Institute</kwd>
+				<kwd>GlaxoSmithKline plc</kwd>
+				<kwd>Harvard Medical School</kwd>
+				<kwd>InteKrin Therapeutics Inc.</kwd>
+				<kwd>Metabolex Inc.</kwd>
+				<kwd>Scripps Florida</kwd>
+				<kwd>Takeda Pharmaceutical Co. Ltd.</kwd>
+            <kwd>The University of Texas Southwestern Medical Center at Dallas</kwd>
+        </kwd-group>
+    </article-meta>
+</front>
+<body>
+     <p>Researchers at the <ext-link xlink:href="http://www.dana-farber.org/"><bold>Dana-Farber Cancer Institute</bold></ext-link> and <ext-link xlink:href="http://www.scripps.edu/florida/"><bold>Scripps Florida</bold></ext-link> have found an alternative mechanism by which peroxisome proliferation&#x2013;activated receptor-&#x3B3; (PPARG; PPAR<sub>&#x3B3;</sub>) agonists exert their antidiabetic effects.<xref ref-type="bibr" rid="b1"/> By blocking phosphorylation of the protein, these compounds actually may improve insulin sensitivity independent of receptor agonism.</p>
+	 <p><xref ref-type="other" rid="illus1"/></p>
+    <p>The findings offer a reason for drug companies to take a fresh look at antidiabetic compounds that may have been previously dismissed due to their reduced agonistic activity but now may be seen to offer therapeutic benefits with the potential for fewer side effects than marketed peroxisome proliferation&#x2013;activated receptor-&#x3B3; (PPARG; PPAR<sub>&#x3B3;</sub>) agonists.</p>
+	 <p>Indeed, the alternative mechanism may explain how partial PPAR<sub>&#x3B3;</sub> agonists in clinical development, including <ext-link xlink:href="http://www.biocentury.com/companies/InteKrin_Therapeutics_Inc?utm_source=1"><bold>InteKrin Therapeutics Inc.</bold></ext-link>'s INT131, can exhibit potent antidiabetic effects similar to those of full agonists such as <ext-link xlink:href="http://www.biocentury.com/companies/GlaxoSmithKline_plc?utm_source=1"><bold>GlaxoSmithKline plc</bold></ext-link>'s Avandia rosiglitazone and <ext-link xlink:href="http://www.biocentury.com/companies/Takeda_Pharmaceutical_Co_Ltd?utm_source=1"><bold>Takeda Pharmaceutical Co. Ltd.</bold></ext-link>'s Actos pioglitazone.</p>
+	 <p>Avandia and Actos are marketed to treat type 2 diabetes and had combined worldwide sales of over $4.5 billion in 2009. However, patients taking these thiazolidinedione (TZD) drugs can experience side effects such as weight gain and edema. An FDA advisory panel recently split on whether Avandia should be taken off the market due to a potential increase in the risk of cardiovascular events.<xref ref-type="bibr" rid="b2"/></p>
+	 <p>Patents on Actos and Avandia will begin to expire in 2011 and 2012, respectively, placing further commercial pressure on companies targeting PPAR<sub>&#x3B3;</sub>.</p>
+	 <p>Now, a team led by Bruce Spiegelman, Korsmeyer professor of cell biology at <ext-link xlink:href="http://hms.harvard.edu/hms/home.asp"><bold>Harvard Medical School</bold></ext-link> and Dana-Farber, and Patrick Griffin, professor and chair of molecular therapeutics and director of the Translational Research Institute at Scripps Florida, has shown that PPAR<sub>&#x3B3;</sub> is phosphorylated by the obesity-activated cyclin dependent kinase 5 (CDK<sup>5</sup>), which results in misregulation of a subset of genes that are important for insulin sensitivity (<italic>see</italic> <xref ref-type="fig" rid="f1"><bold>Figure 1</bold></xref><bold>, &#x201C;A new way to target PPAR<sub>&#x3B3;</sub>&#x201D;</bold>).</p>
+	 <p>The researchers then went on to show that some PPAR<sub>&#x3B3;</sub> agonists can block this CDK<sup>5</sup>-mediated phosphorylation (<italic>see</italic> <xref ref-type="fig" rid="t1"><bold>Table 1</bold></xref><bold>, &#x201C;Targeting PPAR<sub>&#x3B3;</sub>&#x201D;</bold>). Critically, the extent to which a compound agonizes PPAR<sub>&#x3B3;</sub> is not correlated with the extent to which it inhibits phosphorylation, suggesting that these compounds have two distinct and separable activities.</p>
+    <p>The results were published in <bold><italic>Nature</italic></bold>.</p>
+	 <p>&#x201C;It always seemed strange that so-called 'full' agonists such as TZDs and 'partial' agonists such as non-TZDs had similar antidiabetic function <italic>in vivo</italic>,&#x201D; said Spiegelman. &#x201C;It just didn't make sense. It now appears likely that a substantial portion of the therapeutic benefit of PPAR<sub>&#x3B3;</sub> ligands is through the inhibition of CDK<sup>5</sup>-mediated phosphorylation.&#x201D;</p>
+	 <p>PPAR<sub>&#x3B3;</sub> agonism has classically been measured as a compound's ability to stimulate transcription of a PPAR<sub>&#x3B3;</sub>-responsive reporter gene in cell culture. A compound was dubbed a partial agonist if it stimulated less reporter activity than rosiglitazone, the standard benchmark.</p>
+	 <p>&#x201C;For a number of years compounds have been identified that bound to PPAR<sub>&#x3B3;</sub>, had little or no transcriptional agonism in a traditional sense and yet had antidiabetic properties in animal models,&#x201D;<xref ref-type="bibr" rid="b3 b4 b5"/> noted Steven Kliewer, professor of molecular biology at <ext-link xlink:href="http://www.utsouthwestern.edu/"><bold>The University of Texas Southwestern Medical Center at Dallas</bold></ext-link> and a member of InteKrin's scientific advisory board. &#x201C;This paper presents a potential mechanism for understanding this, and it's a big advance.&#x201D;</p>
+    <p>Spiegelman's team demonstrated the function of CDK<sup>5</sup>-mediated phosphorylation by transplanting fibroblasts subcutaneously into mice and allowing them to differentiate into adipocytes. Transplantation of adipocytes that expressed PPAR<sub>&#x3B3;</sub> lacking this phosphorylation site led to greater levels of adiponectin, a key hormone that maintains insulin sensitivity, whereas transplantation of adipocytes that expressed wild-type PPAR<sub>&#x3B3;</sub> did not (ref. <xref ref-type="bibr" rid="b7">7</xref>).</p>
+	 <p>In contrast, mutation of this phosphorylation site had no effect on the level of PPAR<sub>&#x3B3;</sub> agonism in classical transcriptional reporter assays, whether in the presence or absence of rosiglitazone.</p>
+	 <p>However the most striking result was shown in patients taking a TZD agonist, in this case Avandia, in which a decrease in PPAR<sub>&#x3B3;</sub> phosphorylation was significantly correlated with improvement in glucose infusion rate, a measure of insulin sensitivity (<italic>p</italic>=0.001).</p>
+	 <p>&#x201C;This is the most exciting result,&#x201D; said Kliewer. &#x201C;It's a killer figure.&#x201D;</p>
+    <sec specific-use="heading-level-1">
+	 <title>Agonizing over mechanism</title>
+	 <p>Spiegelman reached out to Griffin to gain structural insight into how chemically distinct PPAR<sub>&#x3B3;</sub>-agonizing compounds also prevent its phosphorylation. Although all these compounds were known to interact with a large ligand-binding pocket on PPAR<sub>&#x3B3;</sub>, Griffin's laboratory used hydrogen-deuterium exchange mass spectroscopy (HDX-MS) to show that they cause distinct conformational changes in the receptor that could influence subsequent phosphorylation.</p>
+	 <p>&#x201C;We knew from our previous work that partial agonists altered the conformational dynamics of specific regions of PPAR<sub>&#x3B3;</sub> differently from full agonists,&#x201D; Griffin told <italic>SciBX</italic>. &#x201C;We hypothesized that they might affect coactivator recruitment by generating a new interaction surface or by altering post-translational modifications.<xref ref-type="bibr" rid="b6"/> Here we show that one way they may act is by stabilizing the phosphorylated region of the protein in a configuration that is less favorable to CDK<sup>5</sup>.&#x201D;</p>
+	 <p>These details are important because they provide a mechanistic explanation for how non-TZDs still have potent antidiabetic effects even though they only partially agonize the PPAR<sub>&#x3B3;</sub> receptor. These types of compounds are often referred to as selective PPAR modulators (SPPARMs) and include <ext-link xlink:href="http://www.biocentury.com/companies/Metabolex_Inc?utm_source=1"><bold>Metabolex Inc.</bold></ext-link>'s MBX-102 and InteKrin's INT131.<disp-quote id="pq1"><p>&#x201C;This paper is a game changer because it suggests agonizing the receptor may not be necessary at all.&#x201D;</p><address><institution>Metabolex Inc.</institution></address><attrib>David Karpf</attrib></disp-quote></p>
+	 <p>&#x201C;PPAR<sub>&#x3B3;</sub> full agonists are associated with weight gain, fluid retention, edema, congestive heart failure and bone fracture,&#x201D; said Linda Higgins, president and CEO of InteKrin. &#x201C;SPPARMs such as INT131 have been characterized that achieve separation of side effects from antidiabetic activity. It is not known yet whether INT131 blocks this phosphorylation event, but the central thesis of this paper predicts that it would.&#x201D;</p>
+	 <p>InteKrin has completed a Phase IIb trial of INT131 and plans to move forward with Phase III testing in type 2 diabetes, although it hasn't provided a timeline. INT131 is the SPPARM furthest along in development.</p>
+	 <p>MBX-102 was shown by Spiegelman's group to inhibit phosphorylation of PPAR<sub>&#x3B3;</sub>. Although the compound made it to Phase II testing for type 2 diabetes, it is no longer in development for that indication.</p>
+	 <p>&#x201C;We were one of the first companies to demonstrate the promise of selective modulation of PPAR<sub>&#x3B3;</sub>, by demonstrating glucose lowering without any weight gain or edema, even in diabetic patients also taking insulin,&#x201D; said Metabolex CMO David Karpf. &#x201C;The efficacy can be separated from classic PPAR<sub>&#x3B3;</sub> side effects. This paper is a game changer because it suggests agonizing the receptor may not be necessary at all.&#x201D;</p>
+	 <p>Karpf did note that &#x201C;the glycemic efficacy of MBX-102 didn't reach the commercial threshold to enter into a Phase III trial for type 2 diabetes. However, MBX-102 is also an effective uricosuric agent, where its insulin-sensitizing effects may provide an additional benefit for treatment of gout.&#x201D;<xref ref-type="bibr" rid="b7"/></p>
+	 <p>Metabolex is considering doing a Phase II trial in gout or partnering the compound.</p></sec>
+    <sec specific-use="heading-level-1">
+	 <title>PPARanoia</title>
+	 <p>Although companies could re-examine compounds that bind PPAR<sub>&#x3B3;</sub> but were dismissed due to a lack of agonism in classical transcriptional reporter assays, the stigma attached to PPAR<sub>&#x3B3;</sub> as a therapeutic target still may dissuade further investigation.</p>
+	 <p>&#x201C;Companies have run away from PPAR<sub>&#x3B3;</sub>, and it will be interesting to see if this reignites their interest,&#x201D; said Kliewer. &#x201C;I believe the stigma surrounding PPAR<sub>&#x3B3;</sub> is unwarranted; it is a validated target with a big market, and it is surprising that many companies have completely left it behind.&#x201D;</p>
+	 <p>One problem, according to Kliewer, is that &#x201C;no one knows which PPAR<sub>&#x3B3;</sub> target genes cause the unwanted side effects. Until we know why patients taking Avandia have an increased rate of heart attack, companies will be reticent to target PPAR<sub>&#x3B3;</sub>.&#x201D;</p>
+	 <p>At the same time, he noted, &#x201C;while <italic>in vivo</italic> data suggest that SPPARM compounds are safer, we really don't know why that is.&#x201D;</p>
+	 <p>Spiegelman thinks companies are in a good position to take advantage of the findings. &#x201C;The cool thing is that they probably have freezers full of PPAR<sub>&#x3B3;</sub> agonist derivatives,&#x201D; he said. &#x201C;They should be able to reassess what they have already made rather quickly and dial this mechanism in while dialing agonism out.&#x201D;</p>
+	 <p>Future studies from Spiegelman and Griffin will focus on separating the effects of agonism from the effects of inhibiting phosphorylation. The team is developing compounds that block only the CDK<sup>5</sup> phosphorylation site and do not agonize PPAR<sub>&#x3B3;</sub>. They also are developing mice with a mutation at the PPAR<sub>&#x3B3;</sub> phosphorylation site to address its <italic>in vivo</italic> function in metabolism.</p>
+	 <p>Spiegelman said a patent application has been filed covering this work. It is available for licensing.</p></sec>
+    <sec specific-use="heading-level-1">
+	 <title>Companies and institutions mentioned</title>
+	 <p><list id="l1" list-type="bullet">
+	 <list-item><p><ext-link xlink:href="http://www.dana-farber.org/"><bold>Dana-Farber Cancer Institute</bold></ext-link>, Boston, Mass.</p></list-item>
+	 <list-item><p><ext-link xlink:href="http://www.biocentury.com/companies/GlaxoSmithKline_plc?utm_source=1"><bold>GlaxoSmithKline plc</bold></ext-link> (LSE:GSK; NYSE:GSK), London, U.K.</p></list-item>
+	 <list-item><p><ext-link xlink:href="http://hms.harvard.edu/hms/home.asp"><bold>Harvard Medical School</bold></ext-link>, Boston, Mass.</p></list-item>
+	 <list-item><p><ext-link xlink:href="http://www.biocentury.com/companies/InteKrin_Therapeutics_Inc?utm_source=1"><bold>InteKrin Therapeutics Inc.</bold></ext-link>, Los Altos, Calif.</p></list-item>
+	 <list-item><p><ext-link xlink:href="http://www.biocentury.com/companies/Metabolex_Inc?utm_source=1"><bold>Metabolex Inc.</bold></ext-link>, Hayward, Calif.</p></list-item>
+	 <list-item><p><ext-link xlink:href="http://www.scripps.edu/florida/"><bold>Scripps Florida</bold></ext-link>, Jupiter, Fla.</p></list-item>
+	 <list-item><p><ext-link xlink:href="http://www.biocentury.com/companies/Takeda_Pharmaceutical_Co_Ltd?utm_source=1"><bold>Takeda Pharmaceutical Co. Ltd.</bold></ext-link> (Tokyo:4502), Osaka, Japan</p></list-item>
+<list-item><p><ext-link xlink:href="http://www.utsouthwestern.edu/"><bold>The University of Texas Southwestern Medical Center at Dallas</bold></ext-link>, Dallas, Texas</p></list-item></list></p></sec>
+</body>
+<back>
+    <ref-list>
+        <title>References</title>
+        <ref id="b1"><element-citation xlink:role="original-article" publication-type="journal">
+            <name><surname>Choi</surname><given-names>J.H.</given-names></name>
+            <etal/>
+            <source>Nature</source>
+            <year>2010</year>
+            <month>07</month>
+            <day>21</day>
+            <elocation-id content-type="doi">10.1038/nature09291</elocation-id>
+            <named-content content-type="contact">Bruce Spiegelman, Harvard Medical School, Boston, Mass. <email>bruce_spiegelman@dfci.harvard.edu</email></named-content>
+        </element-citation></ref>
+        <ref id="b2"><element-citation xlink:role="original-article" publication-type="journal">
+            <name><surname>Usdin</surname><given-names>S.</given-names></name> <etal/> 
+            <source>BioCentury</source><volume>18</volume><issue>32</issue><fpage>A6</fpage>
+            <year>2010</year><month>07</month><day>19</day>
+            <elocation-id content-type="doi"></elocation-id>
+        </element-citation></ref>
+        <ref id="b3"><element-citation xlink:role="original-article" publication-type="journal">
+            <name><surname>Motani</surname><given-names>A.</given-names></name> <etal/> 
+            <source>J. Mol. Biol.</source>
+            <volume>386</volume><fpage>1301</fpage><lpage>1311</lpage><year>2009</year>
+        </element-citation></ref>
+        <ref id="b4"><element-citation xlink:role="original-article" publication-type="journal">
+            <name><surname>Gregoire</surname><given-names>F.M.</given-names></name> <etal/> 
+            <source>Mol. Endocrinol.</source>
+            <volume>23</volume><fpage>975</fpage><lpage>988</lpage><year>2009</year>
+        </element-citation></ref>
+        <ref id="b5"><element-citation xlink:role="original-article" publication-type="journal">
+            <name><surname>Acton</surname><given-names>J.J.</given-names><suffix>III</suffix></name> <etal/> 
+            <source>Bioorg. Med. Chem. Lett.</source>
+            <volume>15</volume><fpage>357</fpage><lpage>362</lpage><year>2005</year>
+        </element-citation></ref>
+        <ref id="b6"><element-citation xlink:role="original-article" publication-type="journal">
+            <name><surname>Bruning</surname><given-names>J.B.</given-names></name> <etal/> 
+            <source>Structure</source>
+            <volume>15</volume><fpage>1258</fpage><lpage>1271</lpage><year>2007</year>
+        </element-citation></ref>
+        <ref id="b7"><element-citation xlink:role="original-article" publication-type="book">
+            <name><surname>Abdool Karim</surname><given-names>S.S.</given-names></name>
+            <person-group person-group-type="editor">
+                <name><surname>Leitner</surname><given-names>T</given-names></name>
+                <etal/>
+            </person-group>
+            <source>HIV Sequence Compendium 2005</source><fpage>33</fpage><lpage>40</lpage>
+            <year>2005</year>
+            <publisher-name>Los Alamos National Laboratory</publisher-name>
+            <publisher-loc>Los Alamos, N.M.</publisher-loc>
+            <elocation-id content-type="doi"></elocation-id>
+        </element-citation></ref>
+        <!-- <bib id="b7"><reftxt><refau><snm>Flanagan</snm>, <fnm>M.</fnm></refau> <jtl>BioCentury</jtl> <vid>18</vid>(<iid>32</iid>), <ppf>A12</ppf>; <cd day="19" month="07" year="2010">July 19, 2010</cd></reftxt></bib> -->
+    </ref-list>
+    </back>
+    <floats-group>
+    <fig id="f1" position="float">
+        <caption>
+            <title>A new way to target PPAR<sub>&#x3B3;</sub>.</title>
+            <p><ext-link xlink:href="http://hms.harvard.edu/hms/home.asp"><bold>Harvard Medical School</bold></ext-link> researchers suggest that compounds that block phosphorylation of peroxisome proliferation&#x2013;activated receptor-&#x3B3; (PPARG; PPAR<sub>&#x3B3;</sub>) could provide a better way of treating obesity and type 2 diabetes than marketed thiazolidinediones (TZDs), which agonize the transcription factor, resulting in not only insulin sensitivity but also unwanted downstream effects.</p>
+<p>In adipocytes of mice fed a high-fat diet, cyclin dependent kinase 5 (CDK<sup>5</sup>)-dependent phosphorylation (P) of PPAR<sub>&#x3B3;</sub> at serine 273 is increased, which decreases downstream expression of insulin-sensitizing genes [<bold>a</bold>]. By blocking CDK<sup>5</sup>-dependent phosphorylation, PPAR<sub>&#x3B3;</sub> is able to increase the expression of these genes [<bold>b</bold>].</p>
+        </caption>
+        <alternatives>
+            <graphic content-type="figure" mimetype="image" mime-subtype="jpeg" xlink:href="scibx.2010.940-F1.jpg" position="anchor"/>
+            <media content-type="powerpoint-slide" xlink:href="scibx.2010.940-F1.ppt" mimetype="application" mime-subtype="vnd.ms-powerpoint" />
+        </alternatives>
+    </fig>
+    <graphic id="illus1" xlink:href="scibx.2010.940-I1.jpg" mimetype="image" mime-subtype="jpeg" position="anchor" content-type="illustration"/>
+    <table-wrap id="t1" orientation="portrait">
+        <caption><title><bold>Targeting PPAR<sub>&#x3B3;</sub>.</bold> A study by <ext-link xlink:href="http://hms.harvard.edu/hms/home.asp"><bold>Harvard Medical School</bold></ext-link> researchers found that the peroxisome proliferation&#x2013;activated receptor-&#x3B3; (PPARG; PPAR<sub>&#x3B3;</sub>) agonists Avandia rosiglitazone and MBX-102 blocked cyclin dependent kinase 5 (CDK<sup>5</sup>) phosphorylation of PPAR<sub>&#x3B3;</sub>. Below are other compounds that agonize PPAR<sub>&#x3B3;</sub> on the market or in development that may also block CDK<sup>5</sup> phosphorylation. <italic>Source: BCIQ: BioCentury Online Intelligence</italic></title></caption>
+            <oasis:table frame="topbot" colsep="0" rowsep="0">
+                <oasis:tgroup cols="4" colsep="0" rowsep="0" align="center">
+                <oasis:colspec colnum="1" colname="1" align="left" colwidth="1*"/>
+                <oasis:colspec colnum="2" colname="2" align="left" colwidth="1*"/>
+                <oasis:colspec colnum="3" colname="3" align="left" colwidth="1*"/>
+                <oasis:colspec colnum="4" colname="4" align="left" colwidth="1*"/>
+                <oasis:thead valign="top">
+                    <oasis:row rowsep="1">
+                        <oasis:entry>Company</oasis:entry>
+                        <oasis:entry>Product</oasis:entry>
+                        <oasis:entry>Compound class</oasis:entry>
+                        <oasis:entry>Lead status</oasis:entry>
+                    </oasis:row>
+                </oasis:thead>
+                <oasis:tbody valign="top">
+                    <oasis:row>
+                        <oasis:entry><ext-link xlink:href="http://www.biocentury.com/companies/GlaxoSmithKline_plc?utm_source=1"><bold>GlaxoSmithKline plc</bold></ext-link> (LSE:GSK; NYSE:GSK)</oasis:entry>
+                        <oasis:entry>Avandia rosiglitazone</oasis:entry>
+                        <oasis:entry>Thiazolidinedione (TZD)</oasis:entry>
+                        <oasis:entry>Marketed</oasis:entry></oasis:row>
+                    <oasis:row>
+                        <oasis:entry><ext-link xlink:href="http://www.biocentury.com/companies/Takeda_Pharmaceutical_Co_Ltd?utm_source=1"><bold>Takeda Pharmaceutical Co. Ltd.</bold></ext-link> (Tokyo :4502)/<break/><ext-link xlink:href="http://www.biocentury.com/companies/Eli_Lilly_and_Co?utm_source=1"><bold>Eli Lilly and Co.</bold></ext-link> (NYSE:LLY)/<break/><ext-link xlink:href="http://www.biocentury.com/companies/Pfizer_Inc?utm_source=1"><bold>Pfizer Inc.</bold></ext-link> (NYSE:PFE)</oasis:entry>
+                        <oasis:entry>Actos pioglitazone</oasis:entry>
+                        <oasis:entry>TZD</oasis:entry>
+                        <oasis:entry>Marketed</oasis:entry></oasis:row>
+                    <oasis:row>
+                        <oasis:entry><ext-link xlink:href="http://www.biocentury.com/companies/Dr_Reddys_Laboratories_Ltd?utm_source=1"><bold>Dr. Reddy's Laboratories Ltd.</bold></ext-link> (NYSE:RDY)/<ext-link xlink:href="http://www.biocentury.com/companies/Nordic_Bioscience_Holding?utm_source=1"><bold>Nordic Bioscience Holding</bold></ext-link></oasis:entry>
+                        <oasis:entry>Balaglitazone (DRF 2593)</oasis:entry>
+                        <oasis:entry>TZD</oasis:entry>
+                        <oasis:entry>Phase III</oasis:entry></oasis:row>
+                    <oasis:row>
+                        <oasis:entry><ext-link xlink:href="http://www.biocentury.com/companies/InteKrin_Therapeutics_Inc?utm_source=1"><bold>InteKrin Therapeutics Inc.</bold></ext-link></oasis:entry>
+                        <oasis:entry>INT131</oasis:entry>
+                        <oasis:entry>Non-TZD</oasis:entry>
+                        <oasis:entry>Phase IIb completed</oasis:entry></oasis:row>
+                    <oasis:row>
+                        <oasis:entry><ext-link xlink:href="http://www.biocentury.com/companies/Metabolex_Inc?utm_source=1"><bold>Metabolex Inc.</bold></ext-link></oasis:entry>
+                        <oasis:entry>MBX-102</oasis:entry>
+                        <oasis:entry>Non-TZD</oasis:entry>
+                        <oasis:entry>Not applicable<xref ref-type="fn" rid="t1-fn1"><sup>A</sup></xref></oasis:entry>
+                    </oasis:row>                    
+                </oasis:tbody></oasis:tgroup>
+        </oasis:table>
+        <alternatives>
+            <graphic xlink:href="scibx.2010.940-T1.jpg" mimetype="image" mime-subtype="jpeg" position="anchor"/>
+            <media content-type="powerpoint-slide" xlink:href="scibx.2010.940-T1.ppt" mimetype="application/vnd.ms-powerpoint" mime-subtype="ppt" />
+        </alternatives>
+        <table-wrap-foot>
+            <fn id="t1-fn1"><p><sup>A</sup>No longer in development for diabetes.</p></fn>
+        </table-wrap-foot>
+    </table-wrap>
+    
+</floats-group>
+</article>

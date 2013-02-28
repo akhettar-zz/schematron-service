@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+     xmlns:org="http://nature.com" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+	xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" jaxb:version="2.1">
+
+	<xs:annotation>
+		<xs:appinfo>
+			<jaxb:globalBindings>
+				<xjc:serializable />
+			</jaxb:globalBindings>
+		</xs:appinfo>
+	</xs:annotation>
+
+	<xs:element name="reports">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="report" maxOccurs="unbounded" minOccurs="0" />
+			</xs:sequence>
+			<xs:attribute name="href" type="xs:string" />
+			<xs:attribute ref="status" />
+			
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="report">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="message" maxOccurs="unbounded" minOccurs="0" />
+			</xs:sequence>
+			<xs:attribute name="href" type="xs:string" />
+			<xs:attribute ref="status" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="message">
+		<xs:complexType mixed="true">
+			<xs:attribute name="line" type="xs:int" />
+			<xs:attribute name="validatedBy" type="xs:string" />
+			<xs:attribute name="code" type="xs:string" />
+			<xs:attribute name="type" type="xs:string" />
+			<xs:attribute name="column" type="xs:int" />
+			<xs:attribute name="location" type="xs:string" />
+			<xs:attribute name="id" type="xs:string" />
+
+		</xs:complexType>
+	</xs:element>
+
+	<xs:attribute name="status">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="SUCCESS" />
+				<xs:enumeration value="FAILURE" />
+				<xs:enumeration value="FAILURE_PARTIAL"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+
+</xs:schema>

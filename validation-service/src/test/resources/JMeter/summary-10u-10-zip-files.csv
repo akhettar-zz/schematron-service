@@ -1,0 +1,3 @@
+sampler_label,aggregate_report_count,average,aggregate_report_min,aggregate_report_max,aggregate_report_stddev,aggregate_report_error%,aggregate_report_rate,aggregate_report_bandwidth,average_bytes
+SOAP/XML-RPC Request,100,267,261,321,7.855412147049869,0.0,0.9037015615962984,3.9086857581152397,4429.0
+TOTAL,100,267,261,321,7.855412147049869,0.0,0.9037015615962984,3.9086857581152397,4429.0

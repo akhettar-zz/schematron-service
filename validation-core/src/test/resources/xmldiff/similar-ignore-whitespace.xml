@@ -1,0 +1,40 @@
+<article id="msb20126" language="eng">
+    <pubfm>
+        <jtl>Molecular Systems Biology</jtl>
+        <vol>7</vol>
+        <iss>1</iss>
+        <categ id="af" />
+        <issn type="electronic">1744-4292</issn>
+        <cpg>
+            <cpy>2012</cpy>
+            <cpn>Nature Publishing Group</cpn>
+        </cpg>
+        <doi>10.1038/msb.2012.6</doi>
+    </pubfm>
+    <fm>
+        <atl>
+            The clock gene circuit in
+            <i>Arabidopsis</i>
+            includes a repressilator with additional feedback loops
+        </atl>
+        <aug>
+            <au>
+                <fnm>Kieron D</fnm>
+                <snm>Edwards</snm>
+                <orf rid="a1" />
+                <aufnr rid="n1" />
+
+            </au>
+            <aff>
+                <oid id="a1" />
+                <org>School of Biological Sciences, University of Edinburgh</org>
+                ,
+                <cty>Edinburgh</cty>
+                ,
+                <cny>UK</cny>
+            </aff>
+        </aug>
+        <aufn id="n1">Present address: Advanced Technologies Cambridge, 210 Cambridge Science Park, Cambridge CB4 0WA, UK</aufn>
+    </fm>
+
+</article>

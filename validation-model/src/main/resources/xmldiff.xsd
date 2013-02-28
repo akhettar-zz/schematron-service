@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:org="http://nature.com" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+           xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" jaxb:version="2.1">
+    <xs:annotation>
+        <xs:appinfo>
+            <jaxb:globalBindings>
+                <xjc:serializable />
+            </jaxb:globalBindings>
+        </xs:appinfo>
+    </xs:annotation>
+
+    <xs:element name="xmldiff">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="xml"  maxOccurs="2"/>
+            </xs:sequence>
+            <xs:attribute name="dtd" />
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="xml">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:any minOccurs="0" />
+            </xs:sequence>
+            <xs:attribute name="type" />
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="2.4" jmeter="2.9 r1437961">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Batch Upload- DTD data" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">true</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="URL" elementType="Argument">
+            <stringProp name="Argument.name">URL</stringProp>
+            <stringProp name="Argument.value">http://test-integral.nature.com/nlm/nlm-consumer</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Success_Log" elementType="Argument">
+            <stringProp name="Argument.name">Success_Log</stringProp>
+            <stringProp name="Argument.value">C:\NLM_NPG Transform Project\Sprint 7\Load Testing Validation - Integartion - Test Env\Success Log\result</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Failure_Log" elementType="Argument">
+            <stringProp name="Argument.name">Failure_Log</stringProp>
+            <stringProp name="Argument.value">C:\NLM_NPG Transform Project\Sprint 7\Load Testing Validation - Integartion - Test Env\Failure Log\result</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Filename_Valid" elementType="Argument">
+            <stringProp name="Argument.name">Filename_Valid</stringProp>
+            <stringProp name="Argument.value">C:\NLM_NPG Transform Project\Sprint 7\Load Testing Validation - Integartion - Test Env\Samples\Valid.zip</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Filename_Mixed" elementType="Argument">
+            <stringProp name="Argument.name">Filename_Mixed</stringProp>
+            <stringProp name="Argument.value">C:\NLM_NPG Transform Project\Sprint 7\Load Testing Validation - Integartion - Test Env\Samples\Mixed Data.zip</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Filename_Schema" elementType="Argument">
+            <stringProp name="Argument.name">Filename_Schema</stringProp>
+            <stringProp name="Argument.value">C:\NLM_NPG Transform Project\Sprint 7\Load Testing Validation - Integartion - Test Env\Samples\Schema Errors.zip</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Filename_DTD" elementType="Argument">
+            <stringProp name="Argument.name">Filename_DTD</stringProp>
+            <stringProp name="Argument.value">C:\NLM_NPG Transform Project\Sprint 7\Load Testing Validation - Integartion - Test Env\Samples\Dtd.zip</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Java Service -Valid  -1 Users" enabled="false">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1332755323000</longProp>
+        <longProp name="ThreadGroup.end_time">1332755323000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">content-type</stringProp>
+              <stringProp name="Header.value">application/zip</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
+        <SoapSampler guiclass="SoapSamplerGui" testclass="SoapSampler" testname="SOAP/XML-RPC Request" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="SoapSampler.URL_DATA">${URL}</stringProp>
+          <stringProp name="HTTPSamper.xml_data"></stringProp>
+          <stringProp name="SoapSampler.xml_data_file"></stringProp>
+          <stringProp name="SoapSampler.SOAP_ACTION"></stringProp>
+          <stringProp name="SoapSampler.SEND_SOAP_ACTION">true</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">false</boolProp>
+        </SoapSampler>
+        <hashTree/>
+        <ResultSaver guiclass="ResultSaverGui" testclass="ResultSaver" testname="Save Responses to a file" enabled="true">
+          <stringProp name="FileSaver.filename">${Success_Log}</stringProp>
+          <boolProp name="FileSaver.errorsonly">false</boolProp>
+          <boolProp name="FileSaver.skipautonumber">false</boolProp>
+          <boolProp name="FileSaver.skipsuffix">false</boolProp>
+          <boolProp name="FileSaver.successonly">true</boolProp>
+        </ResultSaver>
+        <hashTree/>
+        <ResultSaver guiclass="ResultSaverGui" testclass="ResultSaver" testname="Save Responses to a file" enabled="true">
+          <stringProp name="FileSaver.filename">${Failure_Log}</stringProp>
+          <boolProp name="FileSaver.errorsonly">true</boolProp>
+          <boolProp name="FileSaver.skipautonumber">false</boolProp>
+          <boolProp name="FileSaver.skipsuffix">false</boolProp>
+          <boolProp name="FileSaver.successonly">false</boolProp>
+        </ResultSaver>
+        <hashTree/>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>true</xml>
+              <fieldNames>false</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">100</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1359842283000</longProp>
+        <longProp name="ThreadGroup.end_time">1359842283000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">content-type</stringProp>
+              <stringProp name="Header.value">application/xml</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
+        <SoapSampler guiclass="SoapSamplerGui" testclass="SoapSampler" testname="SOAP/XML-RPC Request" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="SoapSampler.URL_DATA">http://localhost:8080/validation-service/rest/stream/xml</stringProp>
+          <stringProp name="HTTPSamper.xml_data">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE article PUBLIC &quot;-//NLM//DTD JATS (Z39.96) Journal Publishing DTD with OASIS Tables v1.0 20120330//EN&quot; &quot;JATS-journalpublishing-oasis-article1.dtd&quot;&gt;
+&lt;article xmlns:mml=&quot;http://www.w3.org/1998/Math/MathML&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; xmlns:oasis=&quot;http://www.niso.org/standards/z39-96/ns/oasis-exchange/table&quot; article-type=&quot;oa&quot;&gt;
+    &lt;front&gt;
+        &lt;journal-meta&gt;
+            &lt;journal-id journal-id-type=&quot;publisher&quot;&gt;nutd&lt;/journal-id&gt;
+            &lt;journal-title-group&gt;
+                &lt;journal-title&gt;Nutrition &amp;amp; Diabetes&lt;/journal-title&gt;
+            &lt;/journal-title-group&gt;
+            &lt;issn pub-type=&quot;epub&quot;&gt;2044-4052&lt;/issn&gt;
+            &lt;publisher&gt;
+                &lt;publisher-name&gt;Nature Publishing Group&lt;/publisher-name&gt;
+            &lt;/publisher&gt;
+        &lt;/journal-meta&gt;
+        &lt;article-meta&gt;
+            &lt;article-id pub-id-type=&quot;publisher-id&quot;&gt;nutd20101&lt;/article-id&gt;
+            &lt;article-id pub-id-type=&quot;doi&quot;&gt;10.1038/nutd.2010.1&lt;/article-id&gt;
+            &lt;article-categories&gt;
+                &lt;subj-group subj-group-type=&quot;article-heading&quot;&gt;
+                    &lt;subject content-type=&quot;article-heading&quot;&gt;Original Article&lt;/subject&gt;
+                    &lt;subject content-type=&quot;toc-heading&quot;&gt;Original Article&lt;/subject&gt;
+                &lt;/subj-group&gt;
+                &lt;subj-group subj-group-type=&quot;category&quot;&gt;
+                    &lt;subject&gt;oa&lt;/subject&gt;
+                &lt;/subj-group&gt;
+            &lt;/article-categories&gt;
+            &lt;title-group&gt;
+                &lt;article-title&gt;Characterization of a new animal model of metabolic syndrome: the DahlS.Z-&lt;italic&gt;Lepr&lt;/italic&gt;&lt;sup&gt;&lt;italic&gt;fa&lt;/italic&gt;&lt;/sup&gt;/&lt;italic&gt;Lepr&lt;/italic&gt;&lt;sup&gt;&lt;italic&gt;fa&lt;/italic&gt;&lt;/sup&gt; rat&lt;/article-title&gt;
+                &lt;alt-title alt-title-type=&quot;running-title&quot;&gt;A new animal model of metabolic syndrome&lt;/alt-title&gt;
+            &lt;/title-group&gt;
+            &lt;contrib-group&gt;
+                &lt;contrib contrib-type=&quot;author&quot; corresp=&quot;no&quot;&gt;
+                    &lt;name&gt;
+                        &lt;surname&gt;Hattori&lt;/surname&gt;
+                        &lt;given-names&gt;T&lt;/given-names&gt;
+                    &lt;/name&gt;
+                    &lt;xref ref-type=&quot;aff&quot; rid=&quot;a1&quot;/&gt;
+                &lt;/contrib&gt;
+                &lt;contrib contrib-type=&quot;author&quot; corresp=&quot;no&quot;&gt;
+                    &lt;name&gt;
+                        &lt;surname&gt;Murase&lt;/surname&gt;
+                        &lt;given-names&gt;T&lt;/given-names&gt;
+                    &lt;/name&gt;
+                    &lt;xref ref-type=&quot;aff&quot; rid=&quot;a1&quot;/&gt;
+                &lt;/contrib&gt;
+                &lt;contrib contrib-type=&quot;author&quot; corresp=&quot;no&quot;&gt;
+                    &lt;name&gt;
+                        &lt;surname&gt;Ohtake&lt;/surname&gt;
+                        &lt;given-names&gt;M&lt;/given-names&gt;
+                    &lt;/name&gt;
+                    &lt;xref ref-type=&quot;aff&quot; rid=&quot;a1&quot;/&gt;
+                &lt;/contrib&gt;
+                &lt;contrib contrib-type=&quot;author&quot; corresp=&quot;no&quot;&gt;
+                    &lt;name&gt;
+                        &lt;surname&gt;Inoue&lt;/surname&gt;
+                        &lt;given-names&gt;T&lt;/given-names&gt;
+                    &lt;/name&gt;
+                    &lt;xref ref-type=&quot;aff&quot; rid=&quot;a2&quot;/&gt;
+                &lt;/contrib&gt;
+                &lt;contrib contrib-type=&quot;author&quot; corresp=&quot;no&quot;&gt;
+                    &lt;name&gt;
+                        &lt;surname&gt;Tsukamoto&lt;/surname&gt;
+                        &lt;given-names&gt;H&lt;/given-names&gt;
+                    &lt;/name&gt;
+                    &lt;xref ref-type=&quot;aff&quot; rid=&quot;a2&quot;/&gt;
+                &lt;/contrib&gt;
+                &lt;contrib contrib-type=&quot;author&quot; corresp=&quot;no&quot;&gt;
+                    &lt;name&gt;
+                        &lt;surname&gt;Takatsu&lt;/surname&gt;
+                        &lt;given-names&gt;M&lt;/given-names&gt;
+                    &lt;/name&gt;
+                    &lt;xref ref-type=&quot;aff&quot; rid=&quot;a1&quot;/&gt;
+                &lt;/contrib&gt;
+                &lt;contrib contrib-type=&quot;author&quot; corresp=&quot;no&quot;&gt;
+                    &lt;name&gt;
+                        &lt;surname&gt;Kato&lt;/surname&gt;
+                        &lt;given-names&gt;Y&lt;/given-names&gt;
+                    &lt;/name&gt;
+                    &lt;xref ref-type=&quot;aff&quot; rid=&quot;a2&quot;/&gt;
+                &lt;/contrib&gt;
+                &lt;contrib contrib-type=&quot;author&quot; corresp=&quot;no&quot;&gt;
+                    &lt;name&gt;
+                        &lt;surname&gt;Hashimoto&lt;/surname&gt;
+                        &lt;given-names&gt;K&lt;/given-names&gt;
+                    &lt;/name&gt;
+                    &lt;xref ref-type=&quot;aff&quot; rid=&quot;a2&quot;/&gt;
+                &lt;/contrib&gt;
+                &lt;contrib contrib-type=&quot;author&quot; corresp=&quot;no&quot;&gt;
+                    &lt;name&gt;
+                        &lt;surname&gt;Murohara&lt;/surname&gt;
+                        &lt;given-names&gt;T&lt;/given-names&gt;
+                    &lt;/name&gt;
+                    &lt;xref ref-type=&quot;aff&quot; rid=&quot;a3&quot;/&gt;
+                &lt;/contrib&gt;
+                &lt;contrib contrib-type=&quot;author&quot; corresp=&quot;yes&quot;&gt;
+                    &lt;name&gt;
+                        &lt;surname&gt;Nagata&lt;/surname&gt;
+                        &lt;given-names&gt;K&lt;/given-names&gt;
+                    &lt;/name&gt;
+                    &lt;xref ref-type=&quot;aff&quot; rid=&quot;a2&quot;/&gt;
+                    &lt;xref ref-type=&quot;corresp&quot; rid=&quot;c1&quot;/&gt;
+                &lt;/contrib&gt;
+            &lt;/contrib-group&gt;
+            &lt;aff id=&quot;a1&quot;&gt;&lt;institution&gt;Department of Pathophysiological Laboratory Sciences, Nagoya University Graduate School of Medicine&lt;/institution&gt;, &lt;addr-line content-type=&quot;city&quot;&gt;Nagoya&lt;/addr-line&gt;, &lt;country&gt;Japan&lt;/country&gt;&lt;/aff&gt;
+            &lt;aff id=&quot;a2&quot;&gt;&lt;institution&gt;Department of Medical Technology, Nagoya University School of Health Sciences&lt;/institution&gt;, &lt;addr-line content-type=&quot;city&quot;&gt;Nagoya&lt;/addr-line&gt;, &lt;country&gt;Japan&lt;/country&gt;&lt;/aff&gt;
+            &lt;aff id=&quot;a3&quot;&gt;&lt;institution&gt;Department of Cardiology, Nagoya University Graduate School of Medicine&lt;/institution&gt;, &lt;addr-line content-type=&quot;city&quot;&gt;Nagoya&lt;/addr-line&gt;, &lt;country&gt;Japan&lt;/country&gt;&lt;/aff&gt;
+            &lt;author-notes&gt;
+                &lt;corresp id=&quot;c1&quot;&gt;&lt;named-content content-type=&quot;author&quot;&gt;Professor K Nagata&lt;/named-content&gt;, &lt;institution&gt;Department of Medical Technology, Nagoya University School of Health Sciences&lt;/institution&gt;, &lt;addr-line content-type=&quot;street&quot;&gt;1-1-20 Daikominami&lt;/addr-line&gt;, &lt;addr-line content-type=&quot;city&quot;&gt;Higashi-ku&lt;/addr-line&gt;, &lt;addr-line content-type=&quot;state&quot;&gt;Nagoya&lt;/addr-line&gt; &lt;addr-line content-type=&quot;zip&quot;&gt;461-8673&lt;/addr-line&gt;, &lt;country&gt;Japan&lt;/country&gt;. E-mail: &lt;email xlink:href=&quot;nagata@met.nagoya-u.ac.jp&quot;&gt;nagata@met.nagoya-u.ac.jp&lt;/email&gt;&lt;/corresp&gt;
+                &lt;fn fn-type=&quot;conflict&quot; specific-use=&quot;no-conflict&quot;&gt;&lt;p&gt;The authors declare no conflict of interest.&lt;/p&gt;&lt;/fn&gt;
+            &lt;/author-notes&gt;
+            &lt;pub-date pub-type=&quot;epub&quot;&gt;
+                &lt;day&gt;31&lt;/day&gt;
+                &lt;month&gt;01&lt;/month&gt;
+                &lt;year&gt;2011&lt;/year&gt;
+            &lt;/pub-date&gt;
+            &lt;pub-date pub-type=&quot;cover-date&quot;&gt;
+                &lt;month&gt;01&lt;/month&gt;
+                &lt;year&gt;2011&lt;/year&gt;
+            &lt;/pub-date&gt;
+            &lt;volume&gt;1&lt;/volume&gt;
+            &lt;issue seq=&quot;1&quot;&gt;1&lt;/issue&gt;
+            &lt;fpage&gt;e1&lt;/fpage&gt;
+            &lt;history&gt;
+                &lt;date date-type=&quot;received&quot;&gt;
+                    &lt;day&gt;27&lt;/day&gt;
+                    &lt;month&gt;07&lt;/month&gt;
+                    &lt;year&gt;2010&lt;/year&gt;
+                &lt;/date&gt;
+                &lt;date date-type=&quot;rev-recd&quot;&gt;
+                    &lt;day&gt;27&lt;/day&gt;
+                    &lt;month&gt;08&lt;/month&gt;
+                    &lt;year&gt;2010&lt;/year&gt;
+                &lt;/date&gt;
+                &lt;date date-type=&quot;accepted&quot;&gt;
+                    &lt;day&gt;05&lt;/day&gt;
+                    &lt;month&gt;09&lt;/month&gt;
+                    &lt;year&gt;2010&lt;/year&gt;
+                &lt;/date&gt;
+            &lt;/history&gt;
+            &lt;permissions&gt;
+                &lt;copyright-year&gt;2011&lt;/copyright-year&gt;
+                &lt;copyright-holder&gt;Macmillan Publishers Limited&lt;/copyright-holder&gt;
+                &lt;license license-type=&quot;by-nc-nd-3.0&quot; xlink:href=&quot;http://creativecommons.org/licenses/by-nc-nd/3.0/&quot; xlink:title=&quot;http://creativecommons.org/licenses/by-nc-nd/3.0/&quot;&gt;
+                    &lt;license-p&gt;This work is licensed under the Creative Commons Attribution-NonCommercial-No Derivative Works 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/&lt;funding-source source-type=&quot;author-paid&quot;/&gt;&lt;/license-p&gt;
+                &lt;/license&gt;
+            &lt;/permissions&gt;
+            &lt;abstract&gt;
+                &lt;sec specific-use=&quot;heading-level-1&quot;&gt;
+                    &lt;title&gt;Objective:&lt;/title&gt;
+                    &lt;p&gt;The DahlS.Z-&lt;italic&gt;Lepr&lt;/italic&gt;&lt;sup&gt;&lt;italic&gt;fa&lt;/italic&gt;&lt;/sup&gt;/&lt;italic&gt;Lepr&lt;/italic&gt;&lt;sup&gt;&lt;italic&gt;fa&lt;/italic&gt;&lt;/sup&gt; (DS/obese) rat strain was established from a cross between Dahl salt-sensitive rats and Zucker fatty (&lt;italic&gt;fa/fa&lt;/italic&gt;) rats, the latter of which harbor a missense mutation in the leptin receptor gene (&lt;italic&gt;Lepr&lt;/italic&gt;). We examined whether DS/obese rats might be a suitable animal model of metabolic syndrome in humans.&lt;/p&gt;
+&lt;/sec&gt;
+                &lt;sec specific-use=&quot;heading-level-1&quot;&gt;
+                    &lt;title&gt;Methods:&lt;/title&gt;
+                    &lt;p&gt;The systemic pathophysiological and metabolic characteristics of DS/obese rats were determined and compared with those of homozygous lean littermates, namely, DahlS.Z-&lt;italic&gt;Lepr&lt;/italic&gt;&lt;sup&gt;+&lt;/sup&gt;/&lt;italic&gt;Lepr&lt;/italic&gt;&lt;sup&gt;+&lt;/sup&gt; (DS/lean) rats.&lt;/p&gt;
+&lt;/sec&gt;
+                &lt;sec specific-use=&quot;heading-level-1&quot;&gt;
+                    &lt;title&gt;Results:&lt;/title&gt;
+                    &lt;p&gt;Systolic blood pressure was higher in DS/obese rats fed a normal diet than in DS/lean rats at 11 weeks of age and thereafter. The survival rate of DS/obese rats was significantly lower than that of DS/lean rats at 18 weeks. Body weight, visceral and subcutaneous fat mass, as well as heart, kidney and liver weights, were increased in DS/obese rats at 18 weeks compared with DS/lean rats. Serum low-density lipoprotein (LDL)-cholesterol, triglyceride and insulin concentrations, as well as the ratio of LDL-cholesterol to high-density lipoprotein-cholesterol levels, were increased in DS/obese rats, whereas serum glucose concentration did not differ significantly between DS/obese and DS/lean rats. Creatinine clearance was decreased and urinary protein content was increased in DS/obese rats, which also manifested lipid accumulation in the liver and elevation of serum alanine aminotransferase levels.&lt;/p&gt;
+&lt;/sec&gt;
+                &lt;sec specific-use=&quot;heading-level-1&quot;&gt;
+                    &lt;title&gt;Conclusion:&lt;/title&gt;
+                    &lt;p&gt;These results show that the phenotype of DS/obese rats is similar to that of humans with metabolic syndrome, and that these animals may thus be an appropriate model for this condition.&lt;/p&gt;
+&lt;/sec&gt;
+&lt;/abstract&gt;
+            &lt;kwd-group&gt;
+                &lt;kwd&gt;metabolic syndrome&lt;/kwd&gt;
+                &lt;kwd&gt;animal model&lt;/kwd&gt;
+                &lt;kwd&gt;obesity&lt;/kwd&gt;
+                &lt;kwd&gt;hypertension&lt;/kwd&gt;
+                &lt;kwd&gt;dyslipidemia&lt;/kwd&gt;
+                &lt;kwd&gt;insulin resistance&lt;/kwd&gt;
+            &lt;/kwd-group&gt;
+        &lt;/article-meta&gt;
+    &lt;/front&gt;
+    &lt;body&gt;
+        &lt;sec specific-use=&quot;heading-level-1&quot;&gt;
+            &lt;title&gt;Introduction&lt;/title&gt;
+            &lt;p&gt;The combination of insulin resistance, glucose intolerance, dyslipidemia, hypertension and obesity, in particular abdominal obesity, has been referred to as metabolic syndrome (MetS), the prevalence of which is increasing worldwide as a result of changes in diet and lifestyle. Individuals with MetS are at increased risk for development of diabetes and cardiovascular disease.&lt;sup&gt;&lt;xref ref-type=&quot;bibr&quot; rid=&quot;b1&quot;&gt;1&lt;/xref&gt;, &lt;xref ref-type=&quot;bibr&quot; rid=&quot;b2&quot;&gt;2&lt;/xref&gt;&lt;/sup&gt;&lt;/p&gt;
+            &lt;p&gt;Given that MetS is a multifactorial condition, it has been difficult to establish adequate experimental models for its study. The most representative rat strain available to date for the study of MetS is thought to be the Zucker fatty (&lt;italic&gt;fa/fa&lt;/italic&gt;) rat,&lt;sup&gt;&lt;xref ref-type=&quot;bibr&quot; rid=&quot;b3&quot;&gt;3&lt;/xref&gt;&lt;/sup&gt; which harbors a missense mutation (A to C at nucleotide 806) in the gene for the leptin receptor that results in a Gln269Pro substitution in the extracellular domain common to all receptor isoforms.&lt;sup&gt;&lt;xref ref-type=&quot;bibr&quot; rid=&quot;b4&quot;&gt;4&lt;/xref&gt;&lt;/sup&gt; This mutation is associated with reduced binding of leptin to the surface of receptor-expressing cells, without a change in the affinity constant for leptin, and with the development of leptin resistance in the brain, leading to hyperphagia, physical inactivity and consequent obesity. However, conflicting data have been presented with regard to whether these animals are hypertensive compared with lean controls.&lt;sup&gt;&lt;xref ref-type=&quot;bibr&quot; rid=&quot;b3&quot;&gt;3&lt;/xref&gt;&lt;/sup&gt; Leptin receptor mutations have been detected in humans with severe, early-onset obesity.&lt;sup&gt;&lt;xref ref-type=&quot;bibr&quot; rid=&quot;b5&quot;&gt;5&lt;/xref&gt;&lt;/sup&gt;&lt;/p&gt;
+            &lt;p&gt;The Dahl salt-sensitive (DS) rat is one of the most widely studied animal models of hypertension. DS rats develop salt-induced hypertension and subsequently manifest a clear transition from cardiac hypertrophy to heart failure.&lt;sup&gt;&lt;xref ref-type=&quot;bibr&quot; rid=&quot;b6&quot;&gt;6&lt;/xref&gt;&lt;/sup&gt; We previously characterized early changes in excitation&amp;#x2013;contraction coupling in the transition from compensated hypertrophy to failure in cardiomyocytes isolated from DS rats.&lt;sup&gt;&lt;xref ref-type=&quot;bibr&quot; rid=&quot;b7&quot;&gt;7&lt;/xref&gt;&lt;/sup&gt; The value of these animals for investigations into the pharmacology and pathophysiology of hypertension and cardiovascular disease has been recognized for many years. Indeed, we have examined the effects of various drugs and other interventions on cardiac pathophysiology in this model of hypertension and heart failure.&lt;sup&gt;&lt;xref ref-type=&quot;bibr&quot; rid=&quot;b8 b9 b10 b11 b12&quot;&gt;8&amp;#x2013;12&lt;/xref&gt;&lt;/sup&gt;&lt;/p&gt;
+            &lt;p&gt;We have now evaluated a potential new animal model of MetS, the DahlS.Z-&lt;italic&gt;Lepr&lt;/italic&gt;&lt;sup&gt;&lt;italic&gt;fa&lt;/italic&gt;&lt;/sup&gt;/&lt;italic&gt;Lepr&lt;/italic&gt;&lt;sup&gt;&lt;italic&gt;fa&lt;/italic&gt;&lt;/sup&gt; (DS/obese) rat, which was established by crossing DS rats and Zucker rats with the missense mutation in the leptin receptor gene (&lt;italic&gt;Lepr&lt;/italic&gt;). We examined the systemic pathophysiology and metabolic changes in DS/obese rats in comparison with their lean littermates, DahlS.Z-&lt;italic&gt;Lepr&lt;/italic&gt;&lt;sup&gt;+&lt;/sup&gt;/&lt;italic&gt;Lepr&lt;/italic&gt;&lt;sup&gt;+&lt;/sup&gt; (DS/lean) rats, in order to validate their suitability as an animal model of MetS.&lt;/p&gt;
+&lt;/sec&gt;
+        &lt;sec specific-use=&quot;heading-level-1&quot;&gt;
+            &lt;title&gt;Materials and methods&lt;/title&gt; 
+            &lt;sec specific-use=&quot;heading-level-2&quot;&gt;
+                &lt;title&gt;Derivation and genetic characterization of DS/obese rats&lt;/title&gt;
+                &lt;p&gt;DahlS.Z-&lt;italic&gt;Lepr&lt;/italic&gt;&lt;sup&gt;&lt;italic&gt;fa&lt;/italic&gt;&lt;/sup&gt;/Slc rats were generated as the result of an initial mating of a male Zucker rat (Japan SLC, Hamamatsu, Japan) heterozygous for the &lt;italic&gt;fa&lt;/italic&gt; allele of &lt;italic&gt;Lepr&lt;/italic&gt; with a female DahlS/Jr Sea rat (Seac Yoshitomi, Fukuoka, Japan), followed by multiple rounds of backcrossing of the resulting progeny to the DS strain.&lt;sup&gt;&lt;xref ref-type=&quot;bibr&quot; rid=&quot;b13&quot;&gt;13&lt;/xref&gt;&lt;/sup&gt; The &lt;italic&gt;fa&lt;/italic&gt; locus was genotyped by polymerase chain reaction-restricted fragment length polymorphism assay as follows. A primer set to detect the &lt;italic&gt;fa&lt;/italic&gt; allele was designed to cover a 111-bp region containing the &lt;italic&gt;fa&lt;/italic&gt; mutation site in the &lt;italic&gt;Lepr&lt;/italic&gt; with the following sequences: 5&amp;#x2032;-&lt;named-content content-type=&quot;gene-seq&quot;&gt;TATGGAAGTCACAGATGATGG&lt;/named-content&gt;-3&amp;#x2032; and 5&amp;#x2032;-&lt;named-content content-type=&quot;gene-seq&quot;&gt;CTTACGATTGTAGAATTCTCTAA&lt;/named-content&gt;-3&amp;#x2032;. The &lt;italic&gt;Msp&lt;/italic&gt;I digestion of the &lt;italic&gt;fa&lt;/italic&gt; allele produces two fragments of 78 and 33&amp;#x2009;bp. In each generation, male rats in which the &lt;italic&gt;fa&lt;/italic&gt; allele was detected were selected in backcrossing to produce the subsequent generation. Eight to twelve backcrosses were performed to eliminate the undesired genes of the Zucker strain. The final congenic strain was generated by M Nishimura and M Mori (Hamamatsu University School of Medicine) and was established under specific pathogen-free conditions by Japan SLC. Mating of heterozygotes yielded three genotypes but only two phenotypes: homozygous (&lt;italic&gt;fa&lt;/italic&gt;/&lt;italic&gt;fa&lt;/italic&gt;) obese, heterozygous (&lt;italic&gt;fa&lt;/italic&gt;/+) lean and homozygous (+/+) lean, in the ratio of 1:2:1. Our preliminary observations revealed that obese homozygotes, unlike their lean littermates, manifest hyperphagia and develop central (abdominal) obesity beginning at 5 weeks of age.&lt;/p&gt;
+&lt;/sec&gt;
+            &lt;sec specific-use=&quot;heading-level-2&quot;&gt;
+                &lt;title&gt;Animals and experimental protocols&lt;/title&gt;
+                &lt;p&gt;Ten-week-old male inbred DS/obese rats were obtained from Japan SLC and were handled in accordance with the guidelines of Nagoya University Graduate School of Medicine, as well as with the Guide for the Care and Use of Laboratory Animals (US NIH publication no. 85-23, revised 1996). Rats were fed normal laboratory chow containing 0.36% NaCl. Both the diet and tap water were provided &lt;italic&gt;ad libitum&lt;/italic&gt; throughout the experimental period. At 18 weeks of age, rats were placed in metabolic cages to collect 24-h urine specimens and a blood sample was collected from the right carotid artery of the rats fasted overnight. They were subsequently killed by intraperitoneal injection of an overdose of sodium pentobarbital (50&amp;#x2009;mg per kg body weight), and the heart, liver, kidney, and both visceral (retroperitoneal) and subcutaneous (inguinal) fat were removed and subjected to analysis. Age-matched male homozygous lean littermates of DS/obese rats, DahlS.Z-&lt;italic&gt;Lepr&lt;/italic&gt;&lt;sup&gt;+&lt;/sup&gt;/&lt;italic&gt;Lepr&lt;/italic&gt;&lt;sup&gt;+&lt;/sup&gt; (DS/lean), served as control animals.&lt;/p&gt;
+&lt;/sec&gt;
+            &lt;sec specific-use=&quot;heading-level-2&quot;&gt;
+                &lt;title&gt;Physiological and metabolic analyses&lt;/title&gt;
+                &lt;p&gt;Systolic blood pressure (SBP) and heart rate were measured weekly in conscious animals by tail-cuff plethysmography (BP-98A; Softron, Tokyo, Japan). SBP was measured five times at each time point for each rat and the average value was calculated. Urine volume, urinary protein and the ratio of creatinine clearance to kidney weight or body weight were determined by analysis of urine specimens. Creatinine clearance was calculated using the standard formula &lt;italic&gt;UV/P&lt;/italic&gt;, where &lt;italic&gt;U&lt;/italic&gt; is the urinary creatinine concentration, &lt;italic&gt;V&lt;/italic&gt; is the 24-h urine volume and &lt;italic&gt;P&lt;/italic&gt; is the serum creatinine concentration. Blood was collected from the right carotid artery of rats deprived of food overnight and was centrifuged at 3000&amp;#x2009;r.p.m. (1400 &amp;#xD7; &lt;italic&gt;g&lt;/italic&gt;) for 10&amp;#x2009;min at room temperature. The resultant serum supernatant was kept frozen at &amp;#x2212;80&amp;#x2009;&amp;#xB0;C until analysis. Serum glucose and blood urea nitrogen levels, as well as serum levels of triglyceride, total cholesterol, low-density lipoprotein (LDL)-cholesterol, high-density lipoprotein (HDL)-cholesterol, creatinine, aspartate aminotransferase and alanine aminotransferase were measured by routine enzymatic assays. The concentrations of leptin and insulin in serum were measured using mouse/rat enzyme-linked immunosorbent assay kits (Morinaga Bioscience Institute, Yokohama, Japan).&lt;/p&gt;
+&lt;/sec&gt;
+            &lt;sec specific-use=&quot;heading-level-2&quot;&gt;
+                &lt;title&gt;Histology&lt;/title&gt;
+                &lt;p&gt;Liver and kidney tissue samples were fixed in ice-cold 4% paraformaldehyde for 48&amp;#x2013;72&amp;#x2009;h, embedded in paraffin and processed for histology as described.&lt;sup&gt;&lt;xref ref-type=&quot;bibr&quot; rid=&quot;b12&quot;&gt;12&lt;/xref&gt;&lt;/sup&gt; The former was sectioned for staining with hematoxylin&amp;#x2013;eosin and the latter was sectioned for staining with periodic acid&amp;#x2013;Schiff solution.&lt;/p&gt;
+&lt;/sec&gt;
+            &lt;sec specific-use=&quot;heading-level-2&quot;&gt;
+                &lt;title&gt;Statistical analysis&lt;/title&gt;
+                &lt;p&gt;Data are presented as means&amp;#xB1;s.e.m. Differences between groups of rats at 18 weeks of age were assessed using the Mann&amp;#x2013;Whitney &lt;italic&gt;U&lt;/italic&gt;-test. The time courses of SBP or body weight were compared between groups using two-way repeated-measures analysis of variance. Survival rate was analyzed by the standard Kaplan&amp;#x2013;Meier method with the log-rank test. A &lt;italic&gt;P&lt;/italic&gt; value of &amp;lt;0.05 was considered statistically significant.&lt;/p&gt;
+&lt;/sec&gt;
+&lt;/sec&gt;
+        &lt;sec specific-use=&quot;heading-level-1&quot;&gt;
+            &lt;title&gt;Results&lt;/title&gt; 
+            &lt;sec specific-use=&quot;heading-level-2&quot;&gt;
+                &lt;title&gt;Physiological analysis and survival of DS/obese rats&lt;/title&gt;
+                &lt;p&gt;Body weight and visceral (4.7-fold) and subcutaneous (5.0-fold) fat mass were increased in DS/obese rats compared with DS/lean rats (&lt;xref ref-type=&quot;fig&quot; rid=&quot;f1&quot;&gt;Figure 1a&lt;/xref&gt;, &lt;xref ref-type=&quot;table&quot; rid=&quot;t1&quot;&gt;Table 1&lt;/xref&gt;). SBP was significantly higher in DS/obese rats than in DS/lean rats at 11 weeks of age and thereafter (&lt;xref ref-type=&quot;fig&quot; rid=&quot;f1&quot;&gt;Figure 1b&lt;/xref&gt;, &lt;xref ref-type=&quot;table&quot; rid=&quot;t1&quot;&gt;Table 1&lt;/xref&gt;). In total, 13 (65%) of 20 DS/obese rats died during the experimental period (7 from renal failure, 2 from cerebrovascular events and 4 from sudden cardiac death). Kaplan&amp;#x2013;Meier analysis confirmed that the survival rate of DS/obese rats was significantly lower than that of DS/lean rats (&lt;xref ref-type=&quot;fig&quot; rid=&quot;f1&quot;&gt;Figure 1c&lt;/xref&gt;, &lt;xref ref-type=&quot;table&quot; rid=&quot;t1&quot;&gt;Table 1&lt;/xref&gt;). The ratio of left ventricular (LV) weight to tibial length and the ratio of LV weight to right ventricular weight, both of which are indices of LV hypertrophy, were increased in DS/obese rats compared with DS/lean rats (&lt;xref ref-type=&quot;table&quot; rid=&quot;t1&quot;&gt;Table 1&lt;/xref&gt;). The ratios of kidney or liver weight to tibial length were also significantly increased in DS/obese rats compared with DS/lean rats (&lt;xref ref-type=&quot;table&quot; rid=&quot;t1&quot;&gt;Table 1&lt;/xref&gt;). Tibial length of DS/obese rats was significantly shorter than that of DS/lean rats (&lt;xref ref-type=&quot;table&quot; rid=&quot;t1&quot;&gt;Table 1&lt;/xref&gt;).&lt;/p&gt;
+&lt;/sec&gt;
+            &lt;sec specific-use=&quot;heading-level-2&quot;&gt;
+                &lt;title&gt;Metabolic and histological analysis of DS/obese rats&lt;/title&gt;
+                &lt;p&gt;The metabolic parameters of DS/obese and DS/lean rats are summarized in &lt;xref ref-type=&quot;table&quot; rid=&quot;t2&quot;&gt;Table 2&lt;/xref&gt;. The serum leptin concentration in DS/obese rats was 30 times that in DS/lean rats. Although the fasting serum insulin concentration was significantly increased in DS/obese rats compared with DS/lean rats, there was no significant difference in the fasting serum glucose levels between the two strains. However, in another group of DS/obese rats (&lt;italic&gt;n&lt;/italic&gt;=6), the casual serum glucose concentration was increased markedly (mean 309.00&amp;#x2009;mg per 100&amp;#x2009;ml; range 208&amp;#x2013;426&amp;#x2009;mg per 100&amp;#x2009;ml). These data indicate that DS/obese rats developed type 2 diabetes mellitus and insulin resistance. Serum levels of total cholesterol, LDL-cholesterol, HDL-cholesterol and triglyceride, as well as the ratio of LDL-cholesterol to HDL-cholesterol levels, were increased in DS/obese rats. The serum alanine aminotransferase level was also increased in DS/obese rats, whereas serum AST levels did not differ significantly between the two strains. Furthermore, DS/obese rats manifested lipid accumulation in the liver, whereas DS/lean rats did not (&lt;xref ref-type=&quot;fig&quot; rid=&quot;f2&quot;&gt;Figure 2a&lt;/xref&gt;). Blood urea nitrogen, serum creatinine and urinary protein levels were significantly increased, whereas the ratio of creatinine clearance to either body or kidney weight was significantly decreased in DS/obese rats compared with DS/lean rats. Periodic acid&amp;#x2013;Schiff-stained micrographs revealed a grossly normal appearance in DS/lean rats (&lt;xref ref-type=&quot;fig&quot; rid=&quot;f2&quot;&gt;Figure 2b&lt;/xref&gt;, left). DS/obese rats exhibited advanced renal lesions, such as glomerular basement membrane thickening, mesangial matrix accumulation, glycogen deposition and tubulointerstitial changes (&lt;xref ref-type=&quot;fig&quot; rid=&quot;f2&quot;&gt;Figure 2b&lt;/xref&gt;, right).&lt;/p&gt;
+&lt;/sec&gt;
+&lt;/sec&gt;
+        &lt;sec specific-use=&quot;heading-level-1&quot;&gt;
+            &lt;title&gt;Discussion&lt;/title&gt;
+            &lt;p&gt;We have shown that DS/obese rats fed a normal diet develop obesity, as well as hypertension, dyslipidemia, insulin resistance and type 2 diabetes mellitus. In addition, these animals develop cardiac hypertrophy as well as renal and liver damage, which may be responsible for their premature death. Our results thus indicate that this rat strain may be a suitable model of human MetS.&lt;/p&gt;
+            &lt;p&gt;Leptin is an adipocyte-derived hormone that has a pivotal role in regulation of food intake, energy expenditure, body weight and neuroendocrine function.&lt;sup&gt;&lt;xref ref-type=&quot;bibr&quot; rid=&quot;b14 b15 b16&quot;&gt;14&amp;#x2013;16&lt;/xref&gt;&lt;/sup&gt; The serum concentration of leptin was markedly increased in DS/obese rats compared with DS/lean rats, suggesting that the obesity of DS/obese rats is the result of leptin resistance. Hyperleptinemia and leptin resistance occur in animals with diet-induced obesity, as well as in obese humans.&lt;sup&gt;&lt;xref ref-type=&quot;bibr&quot; rid=&quot;b17&quot;&gt;17&lt;/xref&gt;, &lt;xref ref-type=&quot;bibr&quot; rid=&quot;b18&quot;&gt;18&lt;/xref&gt;&lt;/sup&gt; We also found that the serum concentration of insulin was increased in DS/obese rats compared with DS/lean rats, but that serum glucose levels did not differ between the two strains, which is indicative of the development of insulin resistance in the former animals. Leptin suppresses insulin secretion through both central actions and direct effects on pancreatic beta cells.&lt;sup&gt;&lt;xref ref-type=&quot;bibr&quot; rid=&quot;b19&quot;&gt;19&lt;/xref&gt;, &lt;xref ref-type=&quot;bibr&quot; rid=&quot;b20&quot;&gt;20&lt;/xref&gt;&lt;/sup&gt; Leptin opposes insulin resistance, in part, through activation of AMP-activated protein kinase, which results in a reduction in lipid deposition in insulin-sensitive tissues.&lt;sup&gt;&lt;xref ref-type=&quot;bibr&quot; rid=&quot;b21&quot;&gt;21&lt;/xref&gt;&lt;/sup&gt; A lack of effective leptin signaling thus promotes the development of insulin resistance and results in severe obesity at an early age. Indeed, leptin resistance has been shown to induce hyperinsulinemia and insulin resistance in both humans and animals.&lt;sup&gt;&lt;xref ref-type=&quot;bibr&quot; rid=&quot;b22&quot;&gt;22&lt;/xref&gt;, &lt;xref ref-type=&quot;bibr&quot; rid=&quot;b23&quot;&gt;23&lt;/xref&gt;&lt;/sup&gt; Furthermore, there is an interdependent relation between insulin sensitivity and salt sensitivity of blood pressure in DS rats.&lt;sup&gt;&lt;xref ref-type=&quot;bibr&quot; rid=&quot;b24&quot;&gt;24&lt;/xref&gt;&lt;/sup&gt; DS/obese rats may therefore develop insulin resistance as a result of a failure to respond to leptin (because of the mutation in the leptin receptor) and the increased salt sensitivity of blood pressure.&lt;/p&gt;
+            &lt;p&gt;Leptin regulates blood pressure through the sympathetic nervous system.&lt;sup&gt;&lt;xref ref-type=&quot;bibr&quot; rid=&quot;b25&quot;&gt;25&lt;/xref&gt;&lt;/sup&gt; Blood pressure in genetically obese animals with leptin resistance, including obese Zucker rats, has been shown to be reduced or at least not elevated compared with that in their lean littermates.&lt;sup&gt;&lt;xref ref-type=&quot;bibr&quot; rid=&quot;b26&quot;&gt;26&lt;/xref&gt;, &lt;xref ref-type=&quot;bibr&quot; rid=&quot;b27&quot;&gt;27&lt;/xref&gt;&lt;/sup&gt; In the present study, DS/obese rats fed a normal diet manifested increases in both SBP and body weight compared with DS/lean rats at 11 weeks of age and thereafter. It is possible that the presence of the &lt;italic&gt;fa&lt;/italic&gt; allele of &lt;italic&gt;Lepr&lt;/italic&gt; is associated with increased salt sensitivity of blood pressure. Whereas SBP was relatively constant in DS/lean rats during the entire experimental period, it increased progressively, together with body weight, in DS/obese rats. Given that the ratios of both LV weight to tibial length and LV weight to right ventricular weight were significantly increased in DS/obese rats, LV hypertrophy was induced in association with hypertension. Tibial length was significantly shorter in DS/obese rats than in DS/lean rats. Given that leptin contributes to the central regulation of bone metabolism,&lt;sup&gt;&lt;xref ref-type=&quot;bibr&quot; rid=&quot;b28&quot;&gt;28&lt;/xref&gt;&lt;/sup&gt; the growth of bone may be inhibited in DS/obese rats because of the leptin receptor mutation.&lt;/p&gt;
+            &lt;p&gt;Serum levels of total cholesterol, LDL-cholesterol, HDL-cholesterol and triglyceride, as well as the ratio of LDL-cholesterol to HDL-cholesterol concentrations, were significantly increased in DS/obese rats compared with DS/lean rats. The serum of most DS/obese rats was also milky in appearance as a result of their triglyceride and total cholesterol levels being increased 15- and 3-fold, respectively. The marked increase in serum alanine aminotransferase level and lipid accumulation in the liver of DS/obese rats is indicative of fat-induced liver damage. Pronounced renal damage was also apparent in these animals, as revealed by their proteinuria and a decrease in creatinine clearance and by abnormal periodic acid&amp;#x2013;Schiff staining. Several metabolic, functional and structural renal changes in diabetic rodents have fundamental similarities to those occurring in diabetic patients.&lt;sup&gt;&lt;xref ref-type=&quot;bibr&quot; rid=&quot;b29&quot;&gt;29&lt;/xref&gt;&lt;/sup&gt; These diabetic rodents develop renal enlargement, glomerular hypertrophy and renal hyperfiltration within weeks after diabetes debut and, subsequently, increased albumin excretion rate, glomerular extracellular matrix accumulation, increased glomerular basement membrane thickness and mesangial proliferation within months. Moreover, tubulointerstitial fibrosis in diabetes mellitus is an important pathological feature of advanced diabetic nephropathy, particularly in those patients with associated renal insufficiency.&lt;sup&gt;&lt;xref ref-type=&quot;bibr&quot; rid=&quot;b30&quot;&gt;30&lt;/xref&gt;&lt;/sup&gt; Thus, the renal pathological findings observed in DS/obese rats were in good agreement with those in overt diabetic nephropathy.&lt;/p&gt;
+            &lt;p&gt;Several rat strains could be potentially used to study MetS.&lt;sup&gt;&lt;xref ref-type=&quot;bibr&quot; rid=&quot;b3&quot;&gt;3&lt;/xref&gt;&lt;/sup&gt; Although Zucker fatty rats are a widely used model of insulin resistance and type 2 diabetes mellitus, they cannot be considered as a clear experimental model of hypertension. The JCR:LA-corpulent rat, if homozygous for the cp gene, exhibits signs and symptoms characteristic of MetS, but they are not hypertensive.&lt;sup&gt;&lt;xref ref-type=&quot;bibr&quot; rid=&quot;b31&quot;&gt;31&lt;/xref&gt;&lt;/sup&gt; The spontaneously hypertensive rats (SHRs), a well-known experimental model of hypertension, have also been proposed as a model of insulin resistance. In the background of SHRs, different strains of corpulent SHRs, such as obese SHRs/Koletsky rats, SHRs/N-corpulent rats and SHRs/NDmc-corpulent rats, seem to be more appropriate to study MetS than the SHRs. However, these strains slowly develop moderate hypertension with a normal diet and therefore require a long period to exhibit the characteristics of cardiovascular disease.&lt;sup&gt;&lt;xref ref-type=&quot;bibr&quot; rid=&quot;b32&quot;&gt;32&lt;/xref&gt;&lt;/sup&gt; In contrast, DS/obese rats used in the present study become markedly hypertensive even with a normal diet, reflecting increased salt sensitivity of blood pressure, and cause cardiovascular complications and premature death within a relatively short period.&lt;/p&gt;
+            &lt;p&gt;In conclusion, our results show that DS/obese rats fed a normal diet develop obesity as well as hypertension, dyslipidemia and insulin resistance. The phenotype of DS/obese rats is thus similar to that of humans with MetS. The newly established DS/obese rat may therefore be a good animal model of human MetS, and further studies of this model should improve our understanding of the interaction between metabolic and cardiovascular phenotypes in MetS.&lt;/p&gt;
+&lt;/sec&gt;
+&lt;/body&gt;
+    &lt;back&gt;
+        &lt;ack&gt;
+            &lt;p&gt;This work was supported by unrestricted research grants from Nippon Boehringer Ingelheim Co. Ltd. (Tokyo, Japan) and Kyowa Hakko Kirin Co. Ltd. (Tokyo, Japan), as well as by Management Expenses Grants from the Japanese government to Nagoya University.&lt;/p&gt;&lt;/ack&gt;
+        &lt;ref-list specific-use=&quot;numero&quot;&gt;
+            &lt;ref id=&quot;b1&quot;&gt;&lt;mixed-citation publication-type=&quot;journal&quot;&gt;&lt;string-name&gt;&lt;surname&gt;Hanson&lt;/surname&gt; &lt;given-names&gt;RL&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Imperatore&lt;/surname&gt; &lt;given-names&gt;G&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Bennett&lt;/surname&gt; &lt;given-names&gt;PH&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Knowler&lt;/surname&gt; &lt;given-names&gt;WC&lt;/given-names&gt;&lt;/string-name&gt;. &lt;article-title&gt;Components of the &amp;#x2018;metabolic syndrome&amp;#x2019; and incidence of type 2 diabetes&lt;/article-title&gt;. &lt;source&gt;Diabetes&lt;/source&gt; &lt;year&gt;2002&lt;/year&gt;; &lt;volume&gt;51&lt;/volume&gt;: &lt;fpage&gt;3120&lt;/fpage&gt;&amp;#x2013;&lt;lpage&gt;3127&lt;/lpage&gt;.&lt;/mixed-citation&gt;&lt;/ref&gt;
+            &lt;ref id=&quot;b2&quot;&gt;&lt;mixed-citation publication-type=&quot;journal&quot;&gt;&lt;string-name&gt;&lt;surname&gt;Lakka&lt;/surname&gt; &lt;given-names&gt;HM&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Laaksonen&lt;/surname&gt; &lt;given-names&gt;DE&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Lakka&lt;/surname&gt; &lt;given-names&gt;TA&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Niskanen&lt;/surname&gt; &lt;given-names&gt;LK&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Kumpusalo&lt;/surname&gt; &lt;given-names&gt;E&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Tuomilehto&lt;/surname&gt; &lt;given-names&gt;J&lt;/given-names&gt;&lt;/string-name&gt; &lt;italic&gt;et al&lt;/italic&gt;. &lt;article-title&gt;The metabolic syndrome and total and cardiovascular disease mortality in middle-aged men&lt;/article-title&gt;. &lt;source&gt;JAMA&lt;/source&gt; &lt;year&gt;2002&lt;/year&gt;; &lt;volume&gt;288&lt;/volume&gt;: &lt;fpage&gt;2709&lt;/fpage&gt;&amp;#x2013;&lt;lpage&gt;2716&lt;/lpage&gt;.&lt;/mixed-citation&gt;&lt;/ref&gt;
+            &lt;ref id=&quot;b3&quot;&gt;&lt;mixed-citation publication-type=&quot;journal&quot;&gt;&lt;string-name&gt;&lt;surname&gt;Aleixandre de Artinano&lt;/surname&gt; &lt;given-names&gt;A&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Miguel Castro&lt;/surname&gt; &lt;given-names&gt;M&lt;/given-names&gt;&lt;/string-name&gt;. &lt;article-title&gt;Experimental rat models to study the metabolic syndrome&lt;/article-title&gt;. &lt;source&gt;Br J Nutr&lt;/source&gt; &lt;year&gt;2009&lt;/year&gt;; &lt;volume&gt;102&lt;/volume&gt;: &lt;fpage&gt;1246&lt;/fpage&gt;&amp;#x2013;&lt;lpage&gt;1253&lt;/lpage&gt;.&lt;/mixed-citation&gt;&lt;/ref&gt;
+            &lt;ref id=&quot;b4&quot;&gt;&lt;mixed-citation publication-type=&quot;journal&quot;&gt;&lt;string-name&gt;&lt;surname&gt;Takaya&lt;/surname&gt; &lt;given-names&gt;K&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Ogawa&lt;/surname&gt; &lt;given-names&gt;Y&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Isse&lt;/surname&gt; &lt;given-names&gt;N&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Okazaki&lt;/surname&gt; &lt;given-names&gt;T&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Satoh&lt;/surname&gt; &lt;given-names&gt;N&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Masuzaki&lt;/surname&gt; &lt;given-names&gt;H&lt;/given-names&gt;&lt;/string-name&gt; &lt;italic&gt;et al&lt;/italic&gt;. &lt;article-title&gt;Molecular cloning of rat leptin receptor isoform complementary DNAs&amp;#x2014;identification of a missense mutation in Zucker fatty (fa/fa) rats&lt;/article-title&gt;. &lt;source&gt;Biochem Biophys Res Commun&lt;/source&gt; &lt;year&gt;1996&lt;/year&gt;; &lt;volume&gt;225&lt;/volume&gt;: &lt;fpage&gt;75&lt;/fpage&gt;&amp;#x2013;&lt;lpage&gt;83&lt;/lpage&gt;.&lt;/mixed-citation&gt;&lt;/ref&gt;
+            &lt;ref id=&quot;b5&quot;&gt;&lt;mixed-citation publication-type=&quot;journal&quot;&gt;&lt;string-name&gt;&lt;surname&gt;Farooqi&lt;/surname&gt; &lt;given-names&gt;IS&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Wangensteen&lt;/surname&gt; &lt;given-names&gt;T&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Collins&lt;/surname&gt; &lt;given-names&gt;S&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Kimber&lt;/surname&gt; &lt;given-names&gt;W&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Matarese&lt;/surname&gt; &lt;given-names&gt;G&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Keogh&lt;/surname&gt; &lt;given-names&gt;JM&lt;/given-names&gt;&lt;/string-name&gt; &lt;italic&gt;et al&lt;/italic&gt;. &lt;article-title&gt;Clinical and molecular genetic spectrum of congenital deficiency of the leptin receptor&lt;/article-title&gt;. &lt;source&gt;N Engl J Med&lt;/source&gt; &lt;year&gt;2007&lt;/year&gt;; &lt;volume&gt;356&lt;/volume&gt;: &lt;fpage&gt;237&lt;/fpage&gt;&amp;#x2013;&lt;lpage&gt;247&lt;/lpage&gt;.&lt;/mixed-citation&gt;&lt;/ref&gt;
+            &lt;ref id=&quot;b6&quot;&gt;&lt;mixed-citation publication-type=&quot;journal&quot;&gt;&lt;string-name&gt;&lt;surname&gt;Inoko&lt;/surname&gt; &lt;given-names&gt;M&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Kihara&lt;/surname&gt; &lt;given-names&gt;Y&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Morii&lt;/surname&gt; &lt;given-names&gt;I&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Fujiwara&lt;/surname&gt; &lt;given-names&gt;H&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Sasayama&lt;/surname&gt; &lt;given-names&gt;S&lt;/given-names&gt;&lt;/string-name&gt;. &lt;article-title&gt;Transition from compensatory hypertrophy to dilated, failing left ventricles in Dahl salt-sensitive rats&lt;/article-title&gt;. &lt;source&gt;Am J Physiol&lt;/source&gt; &lt;year&gt;1994&lt;/year&gt;; &lt;volume&gt;267&lt;/volume&gt; &lt;issue&gt;(Part 2)&lt;/issue&gt;: &lt;fpage&gt;H2471&lt;/fpage&gt;&amp;#x2013;&lt;lpage&gt;H2482&lt;/lpage&gt;.&lt;/mixed-citation&gt;&lt;/ref&gt;
+            &lt;ref id=&quot;b7&quot;&gt;&lt;mixed-citation publication-type=&quot;journal&quot;&gt;&lt;string-name&gt;&lt;surname&gt;Nagata&lt;/surname&gt; &lt;given-names&gt;K&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Liao&lt;/surname&gt; &lt;given-names&gt;R&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Eberli&lt;/surname&gt; &lt;given-names&gt;FR&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Satoh&lt;/surname&gt; &lt;given-names&gt;N&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Chevalier&lt;/surname&gt; &lt;given-names&gt;B&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Apstein&lt;/surname&gt; &lt;given-names&gt;CS&lt;/given-names&gt;&lt;/string-name&gt; &lt;italic&gt;et al&lt;/italic&gt;. &lt;article-title&gt;Early changes in excitation-contraction coupling: transition from compensated hypertrophy to failure in Dahl salt-sensitive rat myocytes&lt;/article-title&gt;. &lt;source&gt;Cardiovasc Res&lt;/source&gt; &lt;year&gt;1998&lt;/year&gt;; &lt;volume&gt;37&lt;/volume&gt;: &lt;fpage&gt;467&lt;/fpage&gt;&amp;#x2013;&lt;lpage&gt;477&lt;/lpage&gt;.&lt;/mixed-citation&gt;&lt;/ref&gt;
+            &lt;ref id=&quot;b8&quot;&gt;&lt;mixed-citation publication-type=&quot;journal&quot;&gt;&lt;string-name&gt;&lt;surname&gt;Nagata&lt;/surname&gt; &lt;given-names&gt;K&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Somura&lt;/surname&gt; &lt;given-names&gt;F&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Obata&lt;/surname&gt; &lt;given-names&gt;K&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Odashima&lt;/surname&gt; &lt;given-names&gt;M&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Izawa&lt;/surname&gt; &lt;given-names&gt;H&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Ichihara&lt;/surname&gt; &lt;given-names&gt;S&lt;/given-names&gt;&lt;/string-name&gt; &lt;italic&gt;et al&lt;/italic&gt;. &lt;article-title&gt;AT1 receptor blockade reduces cardiac calcineurin activity in hypertensive rats&lt;/article-title&gt;. &lt;source&gt;Hypertension&lt;/source&gt; &lt;year&gt;2002&lt;/year&gt;; &lt;volume&gt;40&lt;/volume&gt;: &lt;fpage&gt;168&lt;/fpage&gt;&amp;#x2013;&lt;lpage&gt;174&lt;/lpage&gt;.&lt;/mixed-citation&gt;&lt;/ref&gt;
+            &lt;ref id=&quot;b9&quot;&gt;&lt;mixed-citation publication-type=&quot;journal&quot;&gt;&lt;string-name&gt;&lt;surname&gt;Xu&lt;/surname&gt; &lt;given-names&gt;J&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Nagata&lt;/surname&gt; &lt;given-names&gt;K&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Obata&lt;/surname&gt; &lt;given-names&gt;K&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Ichihara&lt;/surname&gt; &lt;given-names&gt;S&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Izawa&lt;/surname&gt; &lt;given-names&gt;H&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Noda&lt;/surname&gt; &lt;given-names&gt;A&lt;/given-names&gt;&lt;/string-name&gt; &lt;italic&gt;et al&lt;/italic&gt;. &lt;article-title&gt;Nicorandil promotes myocardial capillary and arteriolar growth in the failing heart of Dahl salt-sensitive hypertensive rats&lt;/article-title&gt;. &lt;source&gt;Hypertension&lt;/source&gt; &lt;year&gt;2005&lt;/year&gt;; &lt;volume&gt;46&lt;/volume&gt;: &lt;fpage&gt;719&lt;/fpage&gt;&amp;#x2013;&lt;lpage&gt;724&lt;/lpage&gt;.&lt;/mixed-citation&gt;&lt;/ref&gt;
+            &lt;ref id=&quot;b10&quot;&gt;&lt;mixed-citation publication-type=&quot;journal&quot;&gt;&lt;string-name&gt;&lt;surname&gt;Nagata&lt;/surname&gt; &lt;given-names&gt;K&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Obata&lt;/surname&gt; &lt;given-names&gt;K&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Xu&lt;/surname&gt; &lt;given-names&gt;J&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Ichihara&lt;/surname&gt; &lt;given-names&gt;S&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Noda&lt;/surname&gt; &lt;given-names&gt;A&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Kimata&lt;/surname&gt; &lt;given-names&gt;H&lt;/given-names&gt;&lt;/string-name&gt; &lt;italic&gt;et al&lt;/italic&gt;. &lt;article-title&gt;Mineralocorticoid receptor antagonism attenuates cardiac hypertrophy and failure in low-aldosterone hypertensive rats&lt;/article-title&gt;. &lt;source&gt;Hypertension&lt;/source&gt; &lt;year&gt;2006&lt;/year&gt;; &lt;volume&gt;47&lt;/volume&gt;: &lt;fpage&gt;656&lt;/fpage&gt;&amp;#x2013;&lt;lpage&gt;664&lt;/lpage&gt;.&lt;/mixed-citation&gt;&lt;/ref&gt;
+            &lt;ref id=&quot;b11&quot;&gt;&lt;mixed-citation publication-type=&quot;journal&quot;&gt;&lt;string-name&gt;&lt;surname&gt;Kato&lt;/surname&gt; &lt;given-names&gt;MF&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Shibata&lt;/surname&gt; &lt;given-names&gt;R&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Obata&lt;/surname&gt; &lt;given-names&gt;K&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Miyachi&lt;/surname&gt; &lt;given-names&gt;M&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Yazawa&lt;/surname&gt; &lt;given-names&gt;H&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Tsuboi&lt;/surname&gt; &lt;given-names&gt;K&lt;/given-names&gt;&lt;/string-name&gt; &lt;italic&gt;et al&lt;/italic&gt;. &lt;article-title&gt;Pioglitazone attenuates cardiac hypertrophy in rats with salt-sensitive hypertension: role of activation of AMP-activated protein kinase and inhibition of Akt&lt;/article-title&gt;. &lt;source&gt;J Hypertens&lt;/source&gt; &lt;year&gt;2008&lt;/year&gt;; &lt;volume&gt;26&lt;/volume&gt;: &lt;fpage&gt;1669&lt;/fpage&gt;&amp;#x2013;&lt;lpage&gt;1676&lt;/lpage&gt;.&lt;/mixed-citation&gt;&lt;/ref&gt;
+            &lt;ref id=&quot;b12&quot;&gt;&lt;mixed-citation publication-type=&quot;journal&quot;&gt;&lt;string-name&gt;&lt;surname&gt;Miyachi&lt;/surname&gt; &lt;given-names&gt;M&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Yazawa&lt;/surname&gt; &lt;given-names&gt;H&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Furukawa&lt;/surname&gt; &lt;given-names&gt;M&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Tsuboi&lt;/surname&gt; &lt;given-names&gt;K&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Ohtake&lt;/surname&gt; &lt;given-names&gt;M&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Nishizawa&lt;/surname&gt; &lt;given-names&gt;T&lt;/given-names&gt;&lt;/string-name&gt; &lt;italic&gt;et al&lt;/italic&gt;. &lt;article-title&gt;Exercise training alters left ventricular geometry and attenuates heart failure in dahl salt-sensitive hypertensive rats&lt;/article-title&gt;. &lt;source&gt;Hypertension&lt;/source&gt; &lt;year&gt;2009&lt;/year&gt;; &lt;volume&gt;53&lt;/volume&gt;: &lt;fpage&gt;701&lt;/fpage&gt;&amp;#x2013;&lt;lpage&gt;707&lt;/lpage&gt;.&lt;/mixed-citation&gt;&lt;/ref&gt;
+            &lt;ref id=&quot;b13&quot;&gt;&lt;mixed-citation publication-type=&quot;journal&quot;&gt;&lt;string-name&gt;&lt;surname&gt;Akimoto&lt;/surname&gt; &lt;given-names&gt;T&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Nakama&lt;/surname&gt; &lt;given-names&gt;K&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Katsuta&lt;/surname&gt; &lt;given-names&gt;Y&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Zhang&lt;/surname&gt; &lt;given-names&gt;XJ&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Ohsuga&lt;/surname&gt; &lt;given-names&gt;M&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Ishizaki&lt;/surname&gt; &lt;given-names&gt;M&lt;/given-names&gt;&lt;/string-name&gt; &lt;italic&gt;et al&lt;/italic&gt;. &lt;article-title&gt;Characterization of a novel congenic strain of diabetic fatty (WBN/Kob-Lepr(fa)) rat&lt;/article-title&gt;. &lt;source&gt;Biochem Biophys Res Commun&lt;/source&gt; &lt;year&gt;2008&lt;/year&gt;; &lt;volume&gt;366&lt;/volume&gt;: &lt;fpage&gt;556&lt;/fpage&gt;&amp;#x2013;&lt;lpage&gt;562&lt;/lpage&gt;.&lt;/mixed-citation&gt;&lt;/ref&gt;
+            &lt;ref id=&quot;b14&quot;&gt;&lt;mixed-citation publication-type=&quot;journal&quot;&gt;&lt;string-name&gt;&lt;surname&gt;Friedman&lt;/surname&gt; &lt;given-names&gt;JM&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Halaas&lt;/surname&gt; &lt;given-names&gt;JL&lt;/given-names&gt;&lt;/string-name&gt;. &lt;article-title&gt;Leptin and the regulation of body weight in mammals&lt;/article-title&gt;. &lt;source&gt;Nature&lt;/source&gt; &lt;year&gt;1998&lt;/year&gt;; &lt;volume&gt;395&lt;/volume&gt;: &lt;fpage&gt;763&lt;/fpage&gt;&amp;#x2013;&lt;lpage&gt;770&lt;/lpage&gt;.&lt;/mixed-citation&gt;&lt;/ref&gt;
+            &lt;ref id=&quot;b15&quot;&gt;&lt;mixed-citation publication-type=&quot;journal&quot;&gt;&lt;string-name&gt;&lt;surname&gt;Trayhurn&lt;/surname&gt; &lt;given-names&gt;P&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Hoggard&lt;/surname&gt; &lt;given-names&gt;N&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Mercer&lt;/surname&gt; &lt;given-names&gt;JG&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Rayner&lt;/surname&gt; &lt;given-names&gt;DV&lt;/given-names&gt;&lt;/string-name&gt;. &lt;article-title&gt;Leptin: fundamental aspects&lt;/article-title&gt;. &lt;source&gt;Int J Obes Relat Metab Disord&lt;/source&gt; &lt;year&gt;1999&lt;/year&gt;; &lt;volume&gt;23&lt;/volume&gt; &lt;issue&gt;(Suppl 1)&lt;/issue&gt;: &lt;fpage&gt;22&lt;/fpage&gt;&amp;#x2013;&lt;lpage&gt;28&lt;/lpage&gt;.&lt;/mixed-citation&gt;&lt;/ref&gt;
+            &lt;ref id=&quot;b16&quot;&gt;&lt;mixed-citation publication-type=&quot;journal&quot;&gt;&lt;string-name&gt;&lt;surname&gt;Margetic&lt;/surname&gt; &lt;given-names&gt;S&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Gazzola&lt;/surname&gt; &lt;given-names&gt;C&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Pegg&lt;/surname&gt; &lt;given-names&gt;GG&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Hill&lt;/surname&gt; &lt;given-names&gt;RA&lt;/given-names&gt;&lt;/string-name&gt;. &lt;article-title&gt;Leptin: a review of its peripheral actions and interactions&lt;/article-title&gt;. &lt;source&gt;Int J Obes Relat Metab Disord&lt;/source&gt; &lt;year&gt;2002&lt;/year&gt;; &lt;volume&gt;26&lt;/volume&gt;: &lt;fpage&gt;1407&lt;/fpage&gt;&amp;#x2013;&lt;lpage&gt;1433&lt;/lpage&gt;.&lt;/mixed-citation&gt;&lt;/ref&gt;
+            &lt;ref id=&quot;b17&quot;&gt;&lt;mixed-citation publication-type=&quot;journal&quot;&gt;&lt;string-name&gt;&lt;surname&gt;Considine&lt;/surname&gt; &lt;given-names&gt;RV&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Sinha&lt;/surname&gt; &lt;given-names&gt;MK&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Heiman&lt;/surname&gt; &lt;given-names&gt;ML&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Kriauciunas&lt;/surname&gt; &lt;given-names&gt;A&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Stephens&lt;/surname&gt; &lt;given-names&gt;TW&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Nyce&lt;/surname&gt; &lt;given-names&gt;MR&lt;/given-names&gt;&lt;/string-name&gt; &lt;italic&gt;et al&lt;/italic&gt;. &lt;article-title&gt;Serum immunoreactive-leptin concentrations in normal-weight and obese humans&lt;/article-title&gt;. &lt;source&gt;N Engl J Med&lt;/source&gt; &lt;year&gt;1996&lt;/year&gt;; &lt;volume&gt;334&lt;/volume&gt;: &lt;fpage&gt;292&lt;/fpage&gt;&amp;#x2013;&lt;lpage&gt;295&lt;/lpage&gt;.&lt;/mixed-citation&gt;&lt;/ref&gt;
+            &lt;ref id=&quot;b18&quot;&gt;&lt;mixed-citation publication-type=&quot;journal&quot;&gt;&lt;string-name&gt;&lt;surname&gt;Maffei&lt;/surname&gt; &lt;given-names&gt;M&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Halaas&lt;/surname&gt; &lt;given-names&gt;J&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Ravussin&lt;/surname&gt; &lt;given-names&gt;E&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Pratley&lt;/surname&gt; &lt;given-names&gt;RE&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Lee&lt;/surname&gt; &lt;given-names&gt;GH&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Zhang&lt;/surname&gt; &lt;given-names&gt;Y&lt;/given-names&gt;&lt;/string-name&gt; &lt;italic&gt;et al&lt;/italic&gt;. &lt;article-title&gt;Leptin levels in human and rodent: measurement of plasma leptin and ob RNA in obese and weight-reduced subjects&lt;/article-title&gt;. &lt;source&gt;Nat Med&lt;/source&gt; &lt;year&gt;1995&lt;/year&gt;; &lt;volume&gt;1&lt;/volume&gt;: &lt;fpage&gt;1155&lt;/fpage&gt;&amp;#x2013;&lt;lpage&gt;1161&lt;/lpage&gt;.&lt;/mixed-citation&gt;&lt;/ref&gt;
+            &lt;ref id=&quot;b19&quot;&gt;&lt;mixed-citation publication-type=&quot;journal&quot;&gt;&lt;string-name&gt;&lt;surname&gt;Cohen&lt;/surname&gt; &lt;given-names&gt;B&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Novick&lt;/surname&gt; &lt;given-names&gt;D&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Rubinstein&lt;/surname&gt; &lt;given-names&gt;M&lt;/given-names&gt;&lt;/string-name&gt;. &lt;article-title&gt;Modulation of insulin activities by leptin&lt;/article-title&gt;. &lt;source&gt;Science&lt;/source&gt; &lt;year&gt;1996&lt;/year&gt;; &lt;volume&gt;274&lt;/volume&gt;: &lt;fpage&gt;1185&lt;/fpage&gt;&amp;#x2013;&lt;lpage&gt;1188&lt;/lpage&gt;.&lt;/mixed-citation&gt;&lt;/ref&gt;
+            &lt;ref id=&quot;b20&quot;&gt;&lt;mixed-citation publication-type=&quot;journal&quot;&gt;&lt;string-name&gt;&lt;surname&gt;Kieffer&lt;/surname&gt; &lt;given-names&gt;TJ&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Heller&lt;/surname&gt; &lt;given-names&gt;RS&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Habener&lt;/surname&gt; &lt;given-names&gt;JF&lt;/given-names&gt;&lt;/string-name&gt;. &lt;article-title&gt;Leptin receptors expressed on pancreatic beta-cells&lt;/article-title&gt;. &lt;source&gt;Biochem Biophys Res Commun&lt;/source&gt; &lt;year&gt;1996&lt;/year&gt;; &lt;volume&gt;224&lt;/volume&gt;: &lt;fpage&gt;522&lt;/fpage&gt;&amp;#x2013;&lt;lpage&gt;527&lt;/lpage&gt;.&lt;/mixed-citation&gt;&lt;/ref&gt;
+            &lt;ref id=&quot;b21&quot;&gt;&lt;mixed-citation publication-type=&quot;journal&quot;&gt;&lt;string-name&gt;&lt;surname&gt;Kahn&lt;/surname&gt; &lt;given-names&gt;BB&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Alquier&lt;/surname&gt; &lt;given-names&gt;T&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Carling&lt;/surname&gt; &lt;given-names&gt;D&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Hardie&lt;/surname&gt; &lt;given-names&gt;DG&lt;/given-names&gt;&lt;/string-name&gt;. &lt;article-title&gt;AMP-activated protein kinase: ancient energy gauge provides clues to modern understanding of metabolism&lt;/article-title&gt;. &lt;source&gt;Cell Metab&lt;/source&gt; &lt;year&gt;2005&lt;/year&gt;; &lt;volume&gt;1&lt;/volume&gt;: &lt;fpage&gt;15&lt;/fpage&gt;&amp;#x2013;&lt;lpage&gt;25&lt;/lpage&gt;.&lt;/mixed-citation&gt;&lt;/ref&gt;
+            &lt;ref id=&quot;b22&quot;&gt;&lt;mixed-citation publication-type=&quot;journal&quot;&gt;&lt;string-name&gt;&lt;surname&gt;Huang&lt;/surname&gt; &lt;given-names&gt;KC&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Lin&lt;/surname&gt; &lt;given-names&gt;RC&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Kormas&lt;/surname&gt; &lt;given-names&gt;N&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Lee&lt;/surname&gt; &lt;given-names&gt;LT&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Chen&lt;/surname&gt; &lt;given-names&gt;CY&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Gill&lt;/surname&gt; &lt;given-names&gt;TP&lt;/given-names&gt;&lt;/string-name&gt; &lt;italic&gt;et al&lt;/italic&gt;. &lt;article-title&gt;Plasma leptin is associated with insulin resistance independent of age, body mass index, fat mass, lipids, and pubertal development in nondiabetic adolescents&lt;/article-title&gt;. &lt;source&gt;Int J Obes Relat Metab Disord&lt;/source&gt; &lt;year&gt;2004&lt;/year&gt;; &lt;volume&gt;28&lt;/volume&gt;: &lt;fpage&gt;470&lt;/fpage&gt;&amp;#x2013;&lt;lpage&gt;475&lt;/lpage&gt;.&lt;/mixed-citation&gt;&lt;/ref&gt;
+            &lt;ref id=&quot;b23&quot;&gt;&lt;mixed-citation publication-type=&quot;journal&quot;&gt;&lt;string-name&gt;&lt;surname&gt;Zimmet&lt;/surname&gt; &lt;given-names&gt;PZ&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Collins&lt;/surname&gt; &lt;given-names&gt;VR&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;de Courten&lt;/surname&gt; &lt;given-names&gt;MP&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Hodge&lt;/surname&gt; &lt;given-names&gt;AM&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Collier&lt;/surname&gt; &lt;given-names&gt;GR&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Dowse&lt;/surname&gt; &lt;given-names&gt;GK&lt;/given-names&gt;&lt;/string-name&gt; &lt;italic&gt;et al&lt;/italic&gt;. &lt;article-title&gt;Is there a relationship between leptin and insulin sensitivity independent of obesity? A population-based study in the Indian Ocean nation of Mauritius. Mauritius NCD Study Group&lt;/article-title&gt;. &lt;source&gt;Int J Obes Relat Metab Disord&lt;/source&gt; &lt;year&gt;1998&lt;/year&gt;; &lt;volume&gt;22&lt;/volume&gt;: &lt;fpage&gt;171&lt;/fpage&gt;&amp;#x2013;&lt;lpage&gt;177&lt;/lpage&gt;.&lt;/mixed-citation&gt;&lt;/ref&gt;
+            &lt;ref id=&quot;b24&quot;&gt;&lt;mixed-citation publication-type=&quot;journal&quot;&gt;&lt;string-name&gt;&lt;surname&gt;Ogihara&lt;/surname&gt; &lt;given-names&gt;T&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Asano&lt;/surname&gt; &lt;given-names&gt;T&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Ando&lt;/surname&gt; &lt;given-names&gt;K&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Sakoda&lt;/surname&gt; &lt;given-names&gt;H&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Anai&lt;/surname&gt; &lt;given-names&gt;M&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Shojima&lt;/surname&gt; &lt;given-names&gt;N&lt;/given-names&gt;&lt;/string-name&gt; &lt;italic&gt;et al&lt;/italic&gt;. &lt;article-title&gt;High-salt diet enhances insulin signaling and induces insulin resistance in Dahl salt-sensitive rats&lt;/article-title&gt;. &lt;source&gt;Hypertension&lt;/source&gt; &lt;year&gt;2002&lt;/year&gt;; &lt;volume&gt;40&lt;/volume&gt;: &lt;fpage&gt;83&lt;/fpage&gt;&amp;#x2013;&lt;lpage&gt;89&lt;/lpage&gt;.&lt;/mixed-citation&gt;&lt;/ref&gt;
+            &lt;ref id=&quot;b25&quot;&gt;&lt;mixed-citation publication-type=&quot;journal&quot;&gt;&lt;string-name&gt;&lt;surname&gt;Aizawa-Abe&lt;/surname&gt; &lt;given-names&gt;M&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Ogawa&lt;/surname&gt; &lt;given-names&gt;Y&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Masuzaki&lt;/surname&gt; &lt;given-names&gt;H&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Ebihara&lt;/surname&gt; &lt;given-names&gt;K&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Satoh&lt;/surname&gt; &lt;given-names&gt;N&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Iwai&lt;/surname&gt; &lt;given-names&gt;H&lt;/given-names&gt;&lt;/string-name&gt; &lt;italic&gt;et al&lt;/italic&gt;. &lt;article-title&gt;Pathophysiological role of leptin in obesity-related hypertension&lt;/article-title&gt;. &lt;source&gt;J Clin Invest&lt;/source&gt; &lt;year&gt;2000&lt;/year&gt;; &lt;volume&gt;105&lt;/volume&gt;: &lt;fpage&gt;1243&lt;/fpage&gt;&amp;#x2013;&lt;lpage&gt;1252&lt;/lpage&gt;.&lt;/mixed-citation&gt;&lt;/ref&gt;
+            &lt;ref id=&quot;b26&quot;&gt;&lt;mixed-citation publication-type=&quot;journal&quot;&gt;&lt;string-name&gt;&lt;surname&gt;Verma&lt;/surname&gt; &lt;given-names&gt;S&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Leung&lt;/surname&gt; &lt;given-names&gt;YM&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Yao&lt;/surname&gt; &lt;given-names&gt;L&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Battell&lt;/surname&gt; &lt;given-names&gt;M&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Dumont&lt;/surname&gt; &lt;given-names&gt;AS&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;McNeill&lt;/surname&gt; &lt;given-names&gt;JH&lt;/given-names&gt;&lt;/string-name&gt;. &lt;article-title&gt;Hyperinsulinemia superimposed on insulin resistance does not elevate blood pressure&lt;/article-title&gt;. &lt;source&gt;Am J Hypertens&lt;/source&gt; &lt;year&gt;2001&lt;/year&gt;; &lt;volume&gt;14&lt;/volume&gt; &lt;issue&gt;(Part 1)&lt;/issue&gt;: &lt;fpage&gt;429&lt;/fpage&gt;&amp;#x2013;&lt;lpage&gt;432&lt;/lpage&gt;.&lt;/mixed-citation&gt;&lt;/ref&gt;
+            &lt;ref id=&quot;b27&quot;&gt;&lt;mixed-citation publication-type=&quot;journal&quot;&gt;&lt;string-name&gt;&lt;surname&gt;Mark&lt;/surname&gt; &lt;given-names&gt;AL&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Shaffer&lt;/surname&gt; &lt;given-names&gt;RA&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Correia&lt;/surname&gt; &lt;given-names&gt;ML&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Morgan&lt;/surname&gt; &lt;given-names&gt;DA&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Sigmund&lt;/surname&gt; &lt;given-names&gt;CD&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Haynes&lt;/surname&gt; &lt;given-names&gt;WG&lt;/given-names&gt;&lt;/string-name&gt;. &lt;article-title&gt;Contrasting blood pressure effects of obesity in leptin-deficient ob/ob mice and agouti yellow obese mice&lt;/article-title&gt;. &lt;source&gt;J Hypertens&lt;/source&gt; &lt;year&gt;1999&lt;/year&gt;; &lt;volume&gt;17&lt;/volume&gt; &lt;issue&gt;(Part 2)&lt;/issue&gt;: &lt;fpage&gt;1949&lt;/fpage&gt;&amp;#x2013;&lt;lpage&gt;1953&lt;/lpage&gt;.&lt;/mixed-citation&gt;&lt;/ref&gt;
+            &lt;ref id=&quot;b28&quot;&gt;&lt;mixed-citation publication-type=&quot;journal&quot;&gt;&lt;string-name&gt;&lt;surname&gt;Ducy&lt;/surname&gt; &lt;given-names&gt;P&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Amling&lt;/surname&gt; &lt;given-names&gt;M&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Takeda&lt;/surname&gt; &lt;given-names&gt;S&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Priemel&lt;/surname&gt; &lt;given-names&gt;M&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Schilling&lt;/surname&gt; &lt;given-names&gt;AF&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Beil&lt;/surname&gt; &lt;given-names&gt;FT&lt;/given-names&gt;&lt;/string-name&gt; &lt;italic&gt;et al&lt;/italic&gt;. &lt;article-title&gt;Leptin inhibits bone formation through a hypothalamic relay: a central control of bone mass&lt;/article-title&gt;. &lt;source&gt;Cell&lt;/source&gt; &lt;year&gt;2000&lt;/year&gt;; &lt;volume&gt;100&lt;/volume&gt;: &lt;fpage&gt;197&lt;/fpage&gt;&amp;#x2013;&lt;lpage&gt;207&lt;/lpage&gt;.&lt;/mixed-citation&gt;&lt;/ref&gt;
+            &lt;ref id=&quot;b29&quot;&gt;&lt;mixed-citation publication-type=&quot;journal&quot;&gt;&lt;string-name&gt;&lt;surname&gt;Flyvbjerg&lt;/surname&gt; &lt;given-names&gt;A&lt;/given-names&gt;&lt;/string-name&gt;. &lt;article-title&gt;Putative pathophysiological role of growth factors and cytokines in experimental diabetic kidney disease&lt;/article-title&gt;. &lt;source&gt;Diabetologia&lt;/source&gt; &lt;year&gt;2000&lt;/year&gt;; &lt;volume&gt;43&lt;/volume&gt;: &lt;fpage&gt;1205&lt;/fpage&gt;&amp;#x2013;&lt;lpage&gt;1223&lt;/lpage&gt;.&lt;/mixed-citation&gt;&lt;/ref&gt;
+            &lt;ref id=&quot;b30&quot;&gt;&lt;mixed-citation publication-type=&quot;journal&quot;&gt;&lt;string-name&gt;&lt;surname&gt;Ziyadeh&lt;/surname&gt; &lt;given-names&gt;FN&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Goldfarb&lt;/surname&gt; &lt;given-names&gt;S&lt;/given-names&gt;&lt;/string-name&gt;. &lt;article-title&gt;The renal tubulointerstitium in diabetes mellitus&lt;/article-title&gt;. &lt;source&gt;Kidney Int&lt;/source&gt; &lt;year&gt;1991&lt;/year&gt;; &lt;volume&gt;39&lt;/volume&gt;: &lt;fpage&gt;464&lt;/fpage&gt;&amp;#x2013;&lt;lpage&gt;475&lt;/lpage&gt;.&lt;/mixed-citation&gt;&lt;/ref&gt;
+            &lt;ref id=&quot;b31&quot;&gt;&lt;mixed-citation publication-type=&quot;journal&quot;&gt;&lt;string-name&gt;&lt;surname&gt;Russell&lt;/surname&gt; &lt;given-names&gt;JC&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Graham&lt;/surname&gt; &lt;given-names&gt;S&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Hameed&lt;/surname&gt; &lt;given-names&gt;M&lt;/given-names&gt;&lt;/string-name&gt;. &lt;article-title&gt;Abnormal insulin and glucose metabolism in the JCR:LA-corpulent rat&lt;/article-title&gt;. &lt;source&gt;Metabolism&lt;/source&gt; &lt;year&gt;1994&lt;/year&gt;; &lt;volume&gt;43&lt;/volume&gt;: &lt;fpage&gt;538&lt;/fpage&gt;&amp;#x2013;&lt;lpage&gt;543&lt;/lpage&gt;.&lt;/mixed-citation&gt;&lt;/ref&gt;
+            &lt;ref id=&quot;b32&quot;&gt;&lt;mixed-citation publication-type=&quot;journal&quot;&gt;&lt;string-name&gt;&lt;surname&gt;Matsui&lt;/surname&gt; &lt;given-names&gt;H&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Ando&lt;/surname&gt; &lt;given-names&gt;K&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Kawarazaki&lt;/surname&gt; &lt;given-names&gt;H&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Nagae&lt;/surname&gt; &lt;given-names&gt;A&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Fujita&lt;/surname&gt; &lt;given-names&gt;M&lt;/given-names&gt;&lt;/string-name&gt;, &lt;string-name&gt;&lt;surname&gt;Shimosawa&lt;/surname&gt; &lt;given-names&gt;T&lt;/given-names&gt;&lt;/string-name&gt; &lt;italic&gt;et al&lt;/italic&gt;. &lt;article-title&gt;Salt excess causes left ventricular diastolic dysfunction in rats with metabolic disorder&lt;/article-title&gt;. &lt;source&gt;Hypertension&lt;/source&gt; &lt;year&gt;2008&lt;/year&gt;; &lt;volume&gt;52&lt;/volume&gt;: &lt;fpage&gt;287&lt;/fpage&gt;&amp;#x2013;&lt;lpage&gt;294&lt;/lpage&gt;.&lt;/mixed-citation&gt;&lt;/ref&gt;
+&lt;/ref-list&gt;
+    &lt;/back&gt;
+    &lt;floats-group&gt;
+        &lt;fig id=&quot;f1&quot;&gt;
+            &lt;caption&gt;
+                &lt;p&gt;Time course of body weight (&lt;bold&gt;a&lt;/bold&gt;), SBP (&lt;bold&gt;b&lt;/bold&gt;) and survival (&lt;bold&gt;c&lt;/bold&gt;) of DS/obese and DS/lean rats. Data for body weight and SBP are given as means&amp;#xB1;s.e.m. for surviving animals (&lt;italic&gt;n&lt;/italic&gt;=6 and 20 for DS/obese and DS/lean rats, respectively, at 11 weeks and &lt;italic&gt;n&lt;/italic&gt;=6 and 7 for DS/obese and DS/lean rats, respectively, at 18 weeks).&lt;/p&gt;
+            &lt;/caption&gt;
+            &lt;graphic position=&quot;anchor&quot; xlink:href=&quot;nutd20101f1.jpg&quot; mimetype=&quot;image&quot; mime-subtype=&quot;jpeg&quot;/&gt;
+        &lt;/fig&gt;
+        &lt;fig id=&quot;f2&quot;&gt;
+            &lt;caption&gt;
+                &lt;p&gt;Histology of the liver and kidney of DS/lean and DS/obese rats at 18 weeks of age. Sections of the liver were stained with hematoxylin&amp;#x2013;eosin (&lt;bold&gt;a&lt;/bold&gt;) and those of the kidney were stained with periodic acid&amp;#x2013;Schiff (PAS) solution (&lt;bold&gt;b&lt;/bold&gt;). Scale bar, 100&amp;#x2009;&amp;#x3BC;m.&lt;/p&gt;
+            &lt;/caption&gt;
+            &lt;graphic position=&quot;anchor&quot; xlink:href=&quot;nutd20101f2.jpg&quot; mimetype=&quot;image&quot; mime-subtype=&quot;jpeg&quot;/&gt;
+        &lt;/fig&gt;
+        &lt;table-wrap id=&quot;t1&quot;&gt;
+            &lt;caption&gt;
+                &lt;title&gt;Physiological parameters of DS/lean and DS/obese rats at 18 weeks of age&lt;/title&gt;
+            &lt;/caption&gt;
+            &lt;oasis:table frame=&quot;topbot&quot;&gt;
+                &lt;oasis:tgroup cols=&quot;4&quot;&gt;
+                    &lt;oasis:colspec colnum=&quot;1&quot; colname=&quot;1&quot; align=&quot;left&quot; colwidth=&quot;1*&quot;/&gt;
+                    &lt;oasis:colspec colnum=&quot;2&quot; colname=&quot;2&quot; align=&quot;char&quot; char=&quot;&amp;#xB1;&quot; colwidth=&quot;1*&quot;/&gt;
+                    &lt;oasis:colspec colnum=&quot;3&quot; colname=&quot;3&quot; align=&quot;char&quot; char=&quot;&amp;#xB1;&quot; colwidth=&quot;1*&quot;/&gt;
+                    &lt;oasis:colspec colnum=&quot;4&quot; colname=&quot;4&quot; align=&quot;char&quot; char=&quot;.&quot; colwidth=&quot;1*&quot;/&gt;
+                    &lt;oasis:thead&gt;
+                        &lt;oasis:row rowsep=&quot;1&quot;&gt;
+                            &lt;oasis:entry&gt;&lt;italic&gt;Parameter&lt;/italic&gt;&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;&lt;italic&gt;DS/lean&lt;/italic&gt;&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;&lt;italic&gt;DS/obese&lt;/italic&gt;&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;P&lt;/oasis:entry&gt;
+                        &lt;/oasis:row&gt;
+                    &lt;/oasis:thead&gt;
+                    &lt;oasis:tbody&gt;
+                        &lt;oasis:row&gt;
+                            &lt;oasis:entry&gt;Body weight (g)&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;443.75&amp;#xB1;21.62&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;536.92&amp;#xB1;6.98&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;0.0072&lt;/oasis:entry&gt;
+                        &lt;/oasis:row&gt;
+                        &lt;oasis:row&gt;
+                            &lt;oasis:entry&gt;Tibial length (mm)&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;40.27&amp;#xB1;0.24&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;36.47&amp;#xB1;0.12&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;0.0036&lt;/oasis:entry&gt;
+                        &lt;/oasis:row&gt;
+                        &lt;oasis:row&gt;
+                            &lt;oasis:entry&gt;SBP (mm&amp;#x2009;Hg)&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;137.7&amp;#xB1;03.04&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;210.62&amp;#xB1;2.54&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;0.0047&lt;/oasis:entry&gt;
+                        &lt;/oasis:row&gt;
+                        &lt;oasis:row&gt;
+                            &lt;oasis:entry&gt;Heart rate (beats&amp;#x2009;min&lt;sup&gt;&amp;#x2212;1&lt;/sup&gt;)&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;417.32&amp;#xB1;13.71&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;400.73&amp;#xB1;15.40&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;0.1792&lt;/oasis:entry&gt;
+                        &lt;/oasis:row&gt;
+                        &lt;oasis:row&gt;
+                            &lt;oasis:entry&gt;Heart weight/tibial length (mg/mm)&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;32.71&amp;#xB1;1.43&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;42.22&amp;#xB1;0.29&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;0.0019&lt;/oasis:entry&gt;
+                        &lt;/oasis:row&gt;
+                        &lt;oasis:row&gt;
+                            &lt;oasis:entry&gt;LV weight/tibial length (mg/mm)&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;24.22&amp;#xB1;1.02&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;32.69&amp;#xB1;0.37&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;0.0036&lt;/oasis:entry&gt;
+                        &lt;/oasis:row&gt;
+                        &lt;oasis:row&gt;
+                            &lt;oasis:entry&gt;LV weight/RV weight&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;4.21&amp;#xB1;0.05&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;4.74&amp;#xB1;0.12&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;0.0301&lt;/oasis:entry&gt;
+                        &lt;/oasis:row&gt;
+                        &lt;oasis:row&gt;
+                            &lt;oasis:entry&gt;Atrial weight/tibial length (mg/mm)&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;2.06&amp;#xB1;0.23&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;2.55&amp;#xB1;0.14&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;0.0896&lt;/oasis:entry&gt;
+                        &lt;/oasis:row&gt;
+                        &lt;oasis:row&gt;
+                            &lt;oasis:entry&gt;Kidney weight/tibial length (mg/mm)&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;78.41&amp;#xB1;6.36&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;128.89&amp;#xB1;3.79&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;0.0025&lt;/oasis:entry&gt;
+                        &lt;/oasis:row&gt;
+                        &lt;oasis:row&gt;
+                            &lt;oasis:entry&gt;Liver weight/tibial length (mg/mm)&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;312.19&amp;#xB1;25.29&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;600.11&amp;#xB1;42.14&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;0.0021&lt;/oasis:entry&gt;
+                        &lt;/oasis:row&gt;
+                        &lt;oasis:row&gt;
+                            &lt;oasis:entry&gt;Visceral fat weight/tibial length (mg/mm)&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;178.02&amp;#xB1;31.55&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;839.28&amp;#xB1;33.00&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;0.0036&lt;/oasis:entry&gt;
+                        &lt;/oasis:row&gt;
+                        &lt;oasis:row&gt;
+                            &lt;oasis:entry&gt;Subcutaneous fat weight/tibial length (mg/mm)&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;158.77&amp;#xB1;27.34&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;795.02&amp;#xB1;41.33&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;0.0036&lt;/oasis:entry&gt;
+                        &lt;/oasis:row&gt;
+                        &lt;oasis:row&gt;
+                            &lt;oasis:entry&gt;Survival (%)&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;100&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;35&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;0.0423&lt;/oasis:entry&gt;
+                        &lt;/oasis:row&gt;
+                    &lt;/oasis:tbody&gt;
+                &lt;/oasis:tgroup&gt;
+            &lt;/oasis:table&gt;
+            &lt;table-wrap-foot&gt;
+                &lt;p&gt;Abbreviations: DS, Dahl salt-sensitive; LV, left ventricular; RV, right ventricular; SBP, systolic blood pressure.&lt;/p&gt;
+                &lt;p&gt;With the exception of survival rate, data are given as means&amp;#xB1;s.e.m. for surviving animals (&lt;italic&gt;n&lt;/italic&gt;=6 and 7 for DS/lean and DS/obese rats, respectively).&lt;/p&gt;
+            &lt;/table-wrap-foot&gt;
+        &lt;/table-wrap&gt;
+        &lt;table-wrap id=&quot;t2&quot;&gt;
+            &lt;caption&gt;
+                &lt;title&gt;Metabolic parameters of DS/lean and DS/obese rats at 18 weeks of age&lt;/title&gt;
+            &lt;/caption&gt;
+            &lt;oasis:table frame=&quot;topbot&quot;&gt;
+                &lt;oasis:tgroup cols=&quot;4&quot;&gt;
+                    &lt;oasis:colspec colnum=&quot;1&quot; colname=&quot;1&quot; align=&quot;left&quot; colwidth=&quot;1*&quot;/&gt;
+                    &lt;oasis:colspec colnum=&quot;2&quot; colname=&quot;2&quot; align=&quot;char&quot; char=&quot;&amp;#xB1;&quot; colwidth=&quot;1*&quot;/&gt;
+                    &lt;oasis:colspec colnum=&quot;3&quot; colname=&quot;3&quot; align=&quot;char&quot; char=&quot;&amp;#xB1;&quot; colwidth=&quot;1*&quot;/&gt;
+                    &lt;oasis:colspec colnum=&quot;4&quot; colname=&quot;4&quot; align=&quot;char&quot; char=&quot;.&quot; colwidth=&quot;1*&quot;/&gt;
+                    &lt;oasis:thead&gt;
+                        &lt;oasis:row rowsep=&quot;1&quot;&gt;
+                            &lt;oasis:entry&gt;&lt;italic&gt;Parameter&lt;/italic&gt;&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;&lt;italic&gt;DS/lean&lt;/italic&gt;&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;&lt;italic&gt;DS/obese&lt;/italic&gt;&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;P&lt;/oasis:entry&gt;
+                        &lt;/oasis:row&gt;
+                    &lt;/oasis:thead&gt;
+                    &lt;oasis:tbody&gt;
+                        &lt;oasis:row&gt;
+                            &lt;oasis:entry&gt;Leptin (ng&amp;#x2009;ml&lt;sup&gt;&amp;#x2212;1&lt;/sup&gt;)&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;1.67&amp;#xB1;0.37&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;53.97&amp;#xB1;2.34&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;0.0005&lt;/oasis:entry&gt;
+                        &lt;/oasis:row&gt;
+                        &lt;oasis:row&gt;
+                            &lt;oasis:entry&gt;Glucose (mg per 100&amp;#x2009;ml)&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;124.50&amp;#xB1;6.40&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;136.33&amp;#xB1;5.27&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;0.2864&lt;/oasis:entry&gt;
+                        &lt;/oasis:row&gt;
+                        &lt;oasis:row&gt;
+                            &lt;oasis:entry&gt;Insulin (ng&amp;#x2009;ml&lt;sup&gt;&amp;#x2212;1&lt;/sup&gt;)&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;0.55&amp;#xB1;0.29&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;3.18&amp;#xB1;1.39&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;0.0209&lt;/oasis:entry&gt;
+                        &lt;/oasis:row&gt;
+                        &lt;oasis:row&gt;
+                            &lt;oasis:entry&gt;Triglyceride (mg per 100&amp;#x2009;ml)&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;102.25&amp;#xB1;25.98&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;1559.93&amp;#xB1;353.89&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;0.0029&lt;/oasis:entry&gt;
+                        &lt;/oasis:row&gt;
+                        &lt;oasis:row&gt;
+                            &lt;oasis:entry&gt;Total cholesterol (mg per 100&amp;#x2009;ml)&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;116.25&amp;#xB1;11.59&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;371.14&amp;#xB1;39.21&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;0.0029&lt;/oasis:entry&gt;
+                        &lt;/oasis:row&gt;
+                        &lt;oasis:row&gt;
+                            &lt;oasis:entry&gt;LDL-cholesterol (mg per 100&amp;#x2009;ml)&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;24.00&amp;#xB1;2.94&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;73.85&amp;#xB1;7.15&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;0.0046&lt;/oasis:entry&gt;
+                        &lt;/oasis:row&gt;
+                        &lt;oasis:row&gt;
+                            &lt;oasis:entry&gt;HDL-cholesterol (mg per 100&amp;#x2009;ml)&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;26.75&amp;#xB1;1.11&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;50.14&amp;#xB1;2.30&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;0.0029&lt;/oasis:entry&gt;
+                        &lt;/oasis:row&gt;
+                        &lt;oasis:row&gt;
+                            &lt;oasis:entry&gt;LDL-cholesterol/HDL-cholesterol&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;0.89&amp;#xB1;009&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;1.59&amp;#xB1;0.15&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;0.0257&lt;/oasis:entry&gt;
+                        &lt;/oasis:row&gt;
+                        &lt;oasis:row&gt;
+                            &lt;oasis:entry&gt;AST (U&amp;#x2009;l&lt;sup&gt;&amp;#x2212;1&lt;/sup&gt;)&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;57.00&amp;#xB1;1.52&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;67.33&amp;#xB1;4.67&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;0.1213&lt;/oasis:entry&gt;
+                        &lt;/oasis:row&gt;
+                        &lt;oasis:row&gt;
+                            &lt;oasis:entry&gt;ALT (U&amp;#x2009;l&lt;sup&gt;&amp;#x2212;1&lt;/sup&gt;)&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;24.67&amp;#xB1;0.88&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;39.25&amp;#xB1;2.63&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;0.0087&lt;/oasis:entry&gt;
+                        &lt;/oasis:row&gt;
+                        &lt;oasis:row&gt;
+                            &lt;oasis:entry&gt;Blood urea nitrogen (mg per 100&amp;#x2009;ml)&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;19.98&amp;#xB1;1.86&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;76.21&amp;#xB1;13.56&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;0.0029&lt;/oasis:entry&gt;
+                        &lt;/oasis:row&gt;
+                        &lt;oasis:row&gt;
+                            &lt;oasis:entry&gt;Creatinine (mg per 100&amp;#x2009;ml)&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;0.32&amp;#xB1;0.03&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;1.09&amp;#xB1;0.19&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;0.0029&lt;/oasis:entry&gt;
+                        &lt;/oasis:row&gt;
+                        &lt;oasis:row&gt;
+                            &lt;oasis:entry&gt;Urinary protein (mg&amp;#x2009;day&lt;sup&gt;&amp;#x2212;1&lt;/sup&gt;)&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;336.29&amp;#xB1;19.58&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;735.52&amp;#xB1;93.97&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;0.0143&lt;/oasis:entry&gt;
+                        &lt;/oasis:row&gt;
+                        &lt;oasis:row&gt;
+                            &lt;oasis:entry&gt;Ccr (ml&amp;#x2009;min&lt;sup&gt;&amp;#x2013;1&lt;/sup&gt; per g kidney weight)&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;1.25&amp;#xB1;0.12&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;0.20&amp;#xB1;0.03&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;0.0082&lt;/oasis:entry&gt;
+                        &lt;/oasis:row&gt;
+                        &lt;oasis:row&gt;
+                            &lt;oasis:entry&gt;Ccr (ml&amp;#x2009;min&lt;sup&gt;&amp;#x2013;1&lt;/sup&gt; per 100&amp;#x2009;g body weight)&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;0.91&amp;#xB1;0.06&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;0.18&amp;#xB1;0.02&lt;/oasis:entry&gt;
+                            &lt;oasis:entry&gt;0.0082&lt;/oasis:entry&gt;
+                        &lt;/oasis:row&gt;
+                    &lt;/oasis:tbody&gt;
+                &lt;/oasis:tgroup&gt;
+            &lt;/oasis:table&gt;
+            &lt;table-wrap-foot&gt;
+                &lt;p&gt;Abbreviations: ALT, alanine aminotransferase; AST, aspartate aminotransferase; Ccr, creatinine clearance; DS, Dahl salt-sensitive; HDL, high-density lipoprotein; LDL, low-density lipoprotein.&lt;/p&gt;
+                &lt;p&gt;Analytes were measured in serum unless indicated otherwise. Data are given as means&amp;#xB1;s.e.m. for surviving animals (&lt;italic&gt;n&lt;/italic&gt;=6 and 7 for DS/lean and DS/obese rats, respectively).&lt;/p&gt;
+            &lt;/table-wrap-foot&gt;
+        &lt;/table-wrap&gt;
+    &lt;/floats-group&gt;
+&lt;/article&gt;</stringProp>
+          <stringProp name="SoapSampler.xml_data_file"></stringProp>
+          <stringProp name="SoapSampler.SOAP_ACTION"></stringProp>
+          <stringProp name="SoapSampler.SEND_SOAP_ACTION">true</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+        </SoapSampler>
+        <hashTree/>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>false</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>false</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<xs:schema  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:org="http://nature.com"
+	elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+	 jaxb:version="2.1">
+	
+	<xs:annotation>
+        <xs:appinfo>
+            <jaxb:globalBindings>
+                <xjc:serializable/>
+            </jaxb:globalBindings>
+        </xs:appinfo>
+    </xs:annotation>
+	
+	<xs:element name="fileDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="name" type ="xs:string" />
+				<xs:element ref="type" />
+				<xs:element name="created" type ="xs:dateTime" />
+				<xs:element name="size" type="xs:long"	 />									
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="type">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="XML"/>
+                <xs:enumeration value="ZIP"/>
+            </xs:restriction>
+        </xs:simpleType>
+   </xs:element>
+
+
+</xs:schema>

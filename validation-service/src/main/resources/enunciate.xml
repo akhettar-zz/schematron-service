@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<enunciate label="nlm service" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://enunciate.codehaus.org/schemas/enunciate-1.24.xsd">
+   
+     <modules>
+		<docs  title="nlm validation service" copyright="www.nature.com"
+			disableRestMountpoint="true" includeExampleXml="true" />
+		<jersey disabled="true" />
+		<csharp disabled="true" />
+	</modules>
+</enunciate>

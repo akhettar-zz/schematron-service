@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD Journal Publishing with OASIS Tables v3.0 20080202//EN" "journalpub-oasis3.dtd">
+<article article-type="cstory" xmlns:xlink="http://www.w3.org/1999/xlink">
+<front>
+    <journal-meta>
+        <journal-title-group><journal-title>Science-Business eXchange</journal-title></journal-title-group>
+        <issn pub-type="ppub">1945-3477</issn>
+        <issn pub-type="epub">1945-3477</issn>
+        <publisher><publisher-name>Nature Publishing Group</publisher-name></publisher>
+    </journal-meta>
+    <article-meta>
+        <article-id pub-id-type="doi">10.1038/scibx.2009.1491</article-id>
+        <article-id pub-id-type="publisher-id">scibx.2009.1491</article-id>
+        <article-categories>
+            <subj-group subj-group-type="category">
+                <subject>cstory</subject>
+            </subj-group>
+            <subj-group subj-group-type="subjects">
+            <subject content-type="subject">scibx-10</subject>
+            </subj-group>
+        </article-categories>
+        <title-group>
+            <article-title>A gut feeling for CD39</article-title>
+            <alt-title>Treating IBD with CD39</alt-title>
+        </title-group>
+        <contrib-group>
+            <contrib contrib-type="author">
+                <name>
+                <surname>Fulmer</surname>
+                <given-names>Tim</given-names>
+            </name>
+                <role>Senior Writer</role>
+            </contrib>
+        </contrib-group>
+        <pub-date pub-type="issue-date">
+            <day>15</day>
+            <month>10</month>
+            <year>2009</year>
+        </pub-date>
+        <volume>2</volume>
+        <issue>40</issue>
+        <permissions><copyright-year>20O9</copyright-year><copyright-holder>Nature Publishing Group</copyright-holder></permissions>
+        <related-article related-article-type="see-also" xlink:href="scibx.2009.1486" ext-link-type="article-id"/>
+        <abstract abstract-type="editor">
+            <p>American and German researchers have reported that enhancing CD39 activity in the gut could help treat inflammatory bowel disease. The researchers are now developing a soluble form of CD39 that they hope could become an infusible therapeutic to treat colitis and Crohn's disease.</p>
+        </abstract>
+         <custom-meta-group>
+            <custom-meta specific-use="change">
+                <meta-name>corrigendum</meta-name>
+                <meta-value>
+                    <named-content content-type="date-of-change">2009-10-16</named-content>
+                    <named-content content-type="change">IThe original role of CD39 in converting ATP to adenosine was misstated and has been changed.</named-content>
+                </meta-value>
+            </custom-meta>
+        </custom-meta-group>
+    </article-meta>
+</front>
+<body>
+	<p>Researchers have reported that enhancing CD39 activity in the gut could trigger a T<sub>reg</sub>-mediated immunosuppressive response to help treat inflammatory bowel disease.<xref ref-type="bibr" rid="b1"/> The researchers are now developing a soluble form of CD39 that they hope could become an infusible therapeutic to treat colitis and Crohn's disease.</p>
+	<p>Multiple signaling pathways underlie the immunosuppressive function of T<sub>regs</sub>. One of those pathways involves the T<sub>reg</sub>-mediated generation of extracellular adenosine, which binds its receptor on the surface of proinflammatory T cells and decreases their development and proliferation (<italic>see</italic> <xref ref-type="fig" rid="f1"><bold>Figure 1</bold></xref><bold>, &#x201C;Targeting CD39 in inflammatory bowel disease&#x201D;</bold>).<xref ref-type="bibr" rid="b2"/></p>
+	<p>A team of researchers led by Simon Robson of the <ext-link xlink:href="http://www.bidmc.org/"><bold>Beth Israel Deaconess Medical Center</bold></ext-link> has been looking for ways to increase levels of extracellular adenosine at sites of inflammation to treat inflammation and autoimmune diseases. The group has focused on enhancing the activity of CD39, an enzyme on the surface of T<sub>regs</sub> involved in the conversion of ATP to adenosine.<xref ref-type="bibr" rid="b3"/></p>
+	<p>Previous work by the group showed that genetic knockout of CD39 led to aberrant proliferation of proinflammatory T cells and failure to prevent allograft rejection in mice.<xref ref-type="bibr" rid="b4"/></p>
+	<p>Now the researchers have extended those findings to autoimmune disease. In a mouse model of chemically-induced acute colitis, animals with <italic>Cd39</italic> knockout had greater disease severity than controls that had colitis and expressed <italic>Cd39</italic>. The knockouts showed increased infiltration of leukocytes and thickening of the colon wall.</p>
+	<p>Next, the researchers attempted to reverse disease severity by administering soluble apyrase, an enzyme that has the same activity as CD39. Compared with controls, <italic>Cd39</italic> knockouts receiving the enzyme showed no significant weight loss (<italic>p</italic>&lt;0.05), a proxy for colitis severity.</p>
+	<p>Finally, the group analyzed publicly available genomewide expression profiles of humans and identified a SNP (rs10748643) near the promoter of <italic>CD39</italic> that was strongly linked to CD39 levels. The low CD39&#x2013;expressing genotype was significantly associated with Crohn's patients, whereas healthy controls were enriched for the high CD39&#x2013;expressing allele (<italic>p</italic>=0.0006).</p>
+	<p>Thus, in both mice and humans, low CD39 expression correlated with severity of gastrointestinal autoimmune disease. The findings were published in the <italic>Proceedings of the National Academy of Sciences</italic>.</p>
+	<sec>
+	<title>Ligand vs. receptor</title>
+	<p>The short serum half-life of adenosine makes direct delivery of the compound problematic for chronic inflammatory conditions. However, approaches for triggering its anti-inflammatory effects could include directly activating the adenosine receptor using agonists or delivering soluble CD39 to increase local adenosine levels.</p>
+	<p>At least one biotech is developing an agonist. But Robson, a professor of medicine at <ext-link xlink:href="http://hms.harvard.edu/hms/home.asp"><bold>Harvard Medical School</bold></ext-link> and attending physician at Beth Israel, said his group wants to design a soluble form of CD39 for delivery to patients with inflammatory bowel disease (IBD).</p>
+	<p>&#x201C;The rationale is that delivering CD39 to, or potentially boosting endogenous levels of CD39 in IBD patients will increase the local pool of extracellular adenosine and therefore have an immunosuppressive effect on pathogenic T cell populations,&#x201D; he said.</p>
+	<p>However, one researcher pointed out that increasing extracellular adenosine could activate all four types of adenosine receptors&#x2014;A<sub>1</sub> (ADORA<sub>1</sub>), A<sub>2A</sub> (ADORA<sub>2A</sub>), A<sub>2B</sub> (ADORA<sub>2B</sub>) and A<sub>3</sub> (ADORA<sub>3</sub>)&#x2014;not all of which are known to generate an immunosuppressive response.</p>
+	<p>&#x201C;Given that the A<sub>2A</sub> and A<sub>2B</sub> receptors are primarily responsible for mediating adenosine's immunosuppressive effects, there's concern the additional activation of A<sub>1</sub> and A<sub>3</sub> could trigger unwanted side effects in tissues expressing those receptors,&#x201D; said Peter Ernst, professor of medicine at the <ext-link xlink:href="http://www.virginia.edu/"><bold>University of Virginia</bold></ext-link>. Even the ADORA<sub>2A</sub> and ADORA<sub>2B</sub> subtypes could mediate unwanted side effects at some ligand concentrations, he added.</p>
+	<p>Indeed, the desire to avoid activation of adenosine receptors not involved in immunosuppression is part of the rationale behind the design of agonists that selectively activate a single receptor, in particular ADORA<sub>2A</sub>.</p>
+	<p>Ernst and his colleague at Virginia, Joel Linden, have separately shown that a selective agonist of ADORA<sub>2A</sub> reduced tissue damage in multiple mouse models of IBD.<xref ref-type="bibr" rid="b5 b6"/></p>
+	<p>PGxHealth, a division of <ext-link xlink:href="http://www.biocentury.com/companies/Clinical_Data_Inc?utm_source=1"><bold>Clinical Data Inc.</bold></ext-link>, has opted to develop an agonist. The company's lead ADORA<sub>2A</sub> agonist, Stedivaze (ATL146e), is in Phase III testing as a coronary artery vasodilator for use with cardiac stress imaging. The company has also developed second-generation ADORA<sub>2A</sub> agonists for anti-inflammatory indications. Those agonists are in preclinical development, according to Jayson Rieger, VP of research at PGxHealth.</p>
+	<p>To get a better idea of whether enhancing CD39 activity would have advantages over agonizing the adenosine receptor, Ernst suggested looking at genetically engineered animal models of IBD and colitis in addition to the chemically-induced model of acute colitis used in the paper. The former might better reflect the aberrant cytokine levels and T cell responses that characterize autoimmune disease.</p>
+	<p>&#x201C;Animals in which autoimmunity is induced by knockout of anti-inflammatory cytokines like IL-10 or by adoptive transfer of pathogenic, proinflammatory T cells could offer better models of IBD and colitis than the model used in the paper,&#x201D; he said.</p>
+	<p>Such animal studies might also help show whether the anti-inflammatory effects of some marketed IBD therapies are mediated by CD39 or by the production of adenosine, said Alan Moss, assistant professor of medicine at Harvard Medical School and director of translational research for the Center for Inflammatory Bowel Disease at Beth Israel.</p>
+	<p>&#x201C;Looking at CD39 activity in biopsy samples and peripheral blood mononuclear cells from IBD patients would provide evidence for the relevance of CD39 to disease in humans,&#x201D; said Moss.</p>
+	<p>Indeed, Robson told <italic>SciBX</italic> that he, Moss and other colleagues are planning to study the levels of CD39 and adenosine receptors in blood and tissue T cell populations from IBD patients receiving anti&#x2013;tumor necrosis factor (TNF) antibodies. That could provide insight into how the anti-inflammatory activity of anti-TNF antibodies is, at least in part, mediated by extracellular adenosine at sites of disease, he said.</p>
+	<p>Robson said he and colleagues own patents and have patents pending that cover both the use of conjugated, soluble CD39 to treat autoimmune disorders and the creation and use of CD39 mutant animals. The IP is available for licensing.</p></sec>
+	<sec>
+	<title>Companies and institutions mentioned</title>
+	<list id="l1">
+	<list-item><p><ext-link xlink:href="http://www.bidmc.org/"><bold>Beth Israel Deaconess Medical Center</bold></ext-link>, Boston, Mass.</p></list-item>
+	<list-item><p><ext-link xlink:href="http://www.biocentury.com/companies/Clinical_Data_Inc?utm_source=1"><bold>Clinical Data Inc.</bold></ext-link> (NASDAQ:CLDA), Newton, Mass.</p></list-item>
+	<list-item><p><ext-link xlink:href="http://hms.harvard.edu/hms/home.asp"><bold>Harvard Medical School</bold></ext-link>, Boston, Mass.</p></list-item>
+	<list-item><p><ext-link xlink:href="http://www.virginia.edu/"><bold>University of Virginia</bold></ext-link>, Charlottesville, Va.</p></list-item></list></sec>
+</body>
+<back>
+    <ref-list>
+		<title>References</title>
+        <ref id="b1"><element-citation xlink:role="original-article" publication-type="journal">
+            <name><surname>Friedman</surname><given-names>D.</given-names></name>
+            <etal/>
+            <source>Proc. Natl. Acad. Sci. USA</source>
+            <year>2009</year>
+            <month>09</month>
+            <day>29</day>
+            <elocation-id content-type="doi">10.1073/pnas.0902869106</elocation-id>
+            <named-content content-type="contact">Simon Robson, Beth Israel Deaconess Medical Center, Boston, Mass. <email>srobson@bidmc.harvard.edu</email></named-content>
+        </element-citation></ref>
+        <ref id="b2"><element-citation xlink:role="original-article" publication-type="journal">
+            <name><surname>Hasko</surname><given-names>G.</given-names></name> <etal/> 
+            <source>Nat. Rev. Drug Discov.</source><volume>7</volume><fpage>759</fpage><lpage>770</lpage>
+            <year>2008</year>
+        </element-citation></ref>
+        <ref id="b3"><element-citation xlink:role="original-article" publication-type="journal">
+            <name><surname>Dwyer</surname><given-names>K.</given-names></name> <etal/> 
+            <source>Purinergic Signal.</source>
+            <volume>3</volume><fpage>171</fpage><lpage>180</lpage><year>2007</year>
+        </element-citation></ref>
+        <ref id="b4"><element-citation xlink:role="original-article" publication-type="journal">
+            <name><surname>Deaglio</surname><given-names>S.</given-names></name> <etal/> 
+            <source>J. Exp. Med.</source>
+            <volume>204</volume><fpage>1257</fpage><lpage>1265</lpage><year>2007</year>
+        </element-citation></ref>
+        <ref id="b5"><element-citation xlink:role="original-article" publication-type="journal">
+            <name><surname>Naganuma</surname><given-names>M.</given-names></name> <etal/> 
+            <source>J. Immunol.</source>
+            <volume>177</volume><fpage>2765</fpage><lpage>2769</lpage><year>2006</year>
+        </element-citation></ref>
+        <ref id="b6"><element-citation xlink:role="original-article" publication-type="journal">
+            <name><surname>Odashima</surname>, <given-names>M.</given-names></name> <etal/> 
+            <source>Gastroenterol.</source>
+            <volume>129</volume><fpage>26</fpage><lpage>33</lpage><year>2005</year>
+        </element-citation></ref>
+    </ref-list>
+    </back>
+    <floats-group>
+	<fig id="f1" position="float">
+        <caption>
+            <title>Targeting CD39 in inflammatory bowel disease.</title>
+            <p>Research published in the <italic>Proceedings of the National Academy of Sciences</italic> suggests that enhancing the activity of CD39, an enzyme expressed on the surface of T<sub>regs</sub>, could help treat inflammatory bowel disease (IBD).</p>
+<p>Inflammation in the gut starts with dendritic cells (DCs) present at the mucosal epithelial layer of the lumen. These cells sense pathogenic bacteria and other antigens. Upon activation by pathogens, local DCs migrate to the lymph nodes to activate na&#xEF;ve T cells [<bold>a</bold>], which undergo differentiation into antigen-specific, proinflammatory effector T cells that fight infection in the lamina propria [<bold>b</bold>].</p>
+<p>T<sub>regs</sub> help prevent excess activation of proinflammatory T cells such as T helper type 1 (Th1), Th2 and Th17 cells, and they do so, at least in part, by increasing levels of extracellular adenosine. Two enzymes expressed on the surface of T<sub>reg</sub> cells&#x2014;CD39 and CD73&#x2014;catalyze the formation of adenosine, which binds the adenosine A<sub>2A</sub> receptor (ADORA<sub>2A</sub>) on effector T cells and blocks their activation and proliferation [<bold>c</bold>].</p>
+<p>Thus, enhancing levels of CD39 could offer an anti-inflammatory strategy for treating IBD. The authors of the <italic>PNAS</italic> study are developing a soluble form of CD39 to administer as a therapeutic. Meanwhile, biotechs are developing ADORA<sub>2A</sub> agonists that are predicted to have a similar anti-inflammatory effect for a variety of indications.</p>
+        </caption>
+        <alternatives>
+            <graphic content-type="figure" mimetype="image" mime-subtype="jpeg" xlink:href="scibx.2009.1491-F1.jpg" position="anchor"/>
+        </alternatives>
+    </fig>
+</floats-group>
+</article>

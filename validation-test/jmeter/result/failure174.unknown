@@ -1,0 +1,8 @@
+java.lang.IllegalArgumentException: Filename references a missing or unreadable file:/Users/a.khettar/Applications/apache-jmeter-2.6/bin/${Filename-xml}
+	at org.apache.jmeter.protocol.http.sampler.SoapSampler.sendPostData(SoapSampler.java:169)
+	at org.apache.jmeter.protocol.http.sampler.SoapSampler.sample(SoapSampler.java:261)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1054)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1043)
+	at org.apache.jmeter.threads.JMeterThread.process_sampler(JMeterThread.java:416)
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:271)
+	at java.lang.Thread.run(Thread.java:680)
