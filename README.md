@@ -5,11 +5,12 @@ REST Service performing DTD/Schema and Schematron Validation. Schema files and S
 
 Technology stack:
 
-> Java
-> REST Jersey
-> Guice for DI
-> Mockito
-> JAXB
+* Java
+* REST Jersey
+* Guice for DI
+* Mockito
+* JAXB
+* Enunciate for API documentation
 
 # To build eclipse project
 
