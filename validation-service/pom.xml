@@ -1,13 +1,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>com.nature.nlm.validation</groupId>
-		<artifactId>nlm-validation</artifactId>
-		<version>1.0.4</version>
+		<groupId>com.akhettar.validation</groupId>
+		<artifactId>xml-validation</artifactId>
+		<version>1.0.6</version>
 	</parent>
 	<artifactId>validation-service</artifactId>
 	<packaging>war</packaging>
-	<name>NLM Validation Service</name>
+	<name>Validation Service</name>
 
 	<build>
 		<resources>

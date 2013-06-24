@@ -1,9 +1,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>com.nature.nlm.validation</groupId>
-		<artifactId>nlm-validation</artifactId>
-		<version>1.0.4</version>
+		<groupId>com.akhettar.validation</groupId>
+		<artifactId>xml-validation</artifactId>
+		<version>1.0.6</version>
 	</parent>
 	<artifactId>validation-model</artifactId>
 	<packaging>jar</packaging>
@@ -45,16 +45,16 @@
 									<xsdOptions>
 										<xsdOption>
 											<xsd>src/main/resources/report.xsd</xsd>
-											<packagename>com.nature.nlm.validation.model.report</packagename>
+											<packagename>com.akhettar.validation.model.report</packagename>
 										</xsdOption>
 										<xsdOption>
 											<bindingFile>src/main/resources/bindings.xjb</bindingFile>
 											<xsd>src/main/resources/file.xsd</xsd>
-											<packagename>com.nature.nlm.validation.model.file</packagename>
+											<packagename>com.akhettar.validation.model.file</packagename>
 										</xsdOption>
                                         <xsdOption>
                                             <xsd>src/main/resources/xmldiff.xsd</xsd>
-                                            <packagename>com.nature.nlm.validation.model.xmldiff</packagename>
+                                            <packagename>com.akhettar.validation.model.xmldiff</packagename>
                                         </xsdOption>
 
                                     </xsdOptions>

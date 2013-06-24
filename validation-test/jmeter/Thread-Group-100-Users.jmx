@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jmeterTestPlan version="1.2" properties="2.2">
+<jmeterTestPlan version="1.2" properties="2.4" jmeter="2.9 r1437961">
   <hashTree>
     <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
       <stringProp name="TestPlan.comments"></stringProp>
@@ -15,10 +15,10 @@
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <stringProp name="LoopController.loops">1</stringProp>
+          <intProp name="LoopController.loops">-1</intProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">1</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <stringProp name="ThreadGroup.num_threads">5</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">30</stringProp>
         <longProp name="ThreadGroup.start_time">1337691364000</longProp>
         <longProp name="ThreadGroup.end_time">1337691364000</longProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
@@ -27,39 +27,68 @@
       </ThreadGroup>
       <hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request" enabled="true">
-          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
             <collectionProp name="Arguments.arguments">
-              <elementProp name="content-type" elementType="HTTPArgument">
+              <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">application/zip</stringProp>
+                <stringProp name="Argument.value">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#xd;
+&lt;!DOCTYPE article PUBLIC &quot;-//NLM//DTD JATS (Z39.96) Journal Publishing DTD with OASIS Tables v1.0 20120330//EN&quot; &quot;JATS-journalpublishing-oasis-article1.dtd&quot;&gt;&#xd;
+&lt;article xmlns:mml=&quot;http://www.w3.org/1998/Math/MathML&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; xmlns:oasis=&quot;http://www.niso.org/standards/z39-96/ns/oasis-exchange/table&quot;   article-type=&quot;ss&quot;&gt;&#xd;
+    &lt;front&gt;&#xd;
+        &lt;journal-meta&gt;&#xd;
+            &#xd;
+            &lt;journal-title-group&gt;&#xd;
+                &lt;journal-title&gt;xyzn Nature products&lt;/journal-title&gt;&#xd;
+            &lt;/journal-title-group&gt;&#xd;
+            &lt;issn pub-type=&quot;ppub&quot;&gt;1469-3178&lt;/issn&gt;&#xd;
+            &lt;issn pub-type=&quot;epub&quot;&gt;1469-3178&lt;/issn&gt;&#xd;
+            &lt;publisher&gt;&#xd;
+                &lt;publisher-name&gt;European Molecular Biology Organization&lt;/publisher-name&gt;&#xd;
+            &lt;/publisher&gt;&#xd;
+        &lt;/journal-meta&gt;&#xd;
+        &lt;article-meta&gt;&#xd;
+            &lt;article-id pub-id-type=&quot;publisher-id&quot;&gt;embor2010200&lt;/article-id&gt;&#xd;
+            &lt;article-id pub-id-type=&quot;doi&quot;&gt;1910111.1038/embor.2010.20058&lt;/article-id&gt;&#xd;
+            &lt;article-categories&gt;&#xd;
+                &lt;subj-group subj-group-type=&quot;category&quot;&gt;&#xd;
+                    &lt;subject&gt;ss&lt;/subject&gt;&#xd;
+                &lt;/subj-group&gt;&#xd;
+                &lt;series-title content-type=&quot;food_science&quot;&gt;Science &amp;amp; Society Series on Food and Science&lt;/series-title&gt;&#xd;
+            &lt;/article-categories&gt;&#xd;
+            &lt;title-group&gt;&#xd;
+                &lt;article-title&gt;Agricultural policies, food and public health&lt;/article-title&gt;&#xd;
+            &lt;/title-group&gt;&#xd;
+            &lt;pub-date pub-type=&quot;issue-date&quot;&gt;&#xd;
+                &lt;month&gt;01&lt;/month&gt;&#xd;
+                &lt;year&gt;2011&lt;/year&gt;&#xd;
+            &lt;/pub-date&gt;&#xd;
+            &lt;volume&gt;3001&lt;/volume&gt;&#xd;
+            &lt;issue&gt;3001&lt;/issue&gt;&#xd;
+            &lt;permissions&gt;&#xd;
+                &lt;copyright-year&gt;2011&lt;/copyright-year&gt;&#xd;
+                &lt;copyright-holder&gt;European Molecular Biology Organization&lt;/copyright-holder&gt;&#xd;
+            &lt;/permissions&gt;&#xd;
+        &lt;/article-meta&gt;&#xd;
+    &lt;/front&gt;&#xd;
+&lt;/article&gt;</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
-                <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                <stringProp name="Argument.name">content-type</stringProp>
               </elementProp>
             </collectionProp>
           </elementProp>
-          <stringProp name="HTTPSampler.domain">localhost</stringProp>
-          <stringProp name="HTTPSampler.port">8080</stringProp>
+          <stringProp name="HTTPSampler.domain">test.npg-services.nature.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.connect_timeout"></stringProp>
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">validation/rest/stream/zip</stringProp>
+          <stringProp name="HTTPSampler.path">validation/rest/xml</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
           <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
           <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
           <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
-          <elementProp name="HTTPsampler.Files" elementType="HTTPFileArgs">
-            <collectionProp name="HTTPFileArgs.files">
-              <elementProp name="/Users/a.khettar/GIT-HUB/nlm-validation/validation-test/jmeter/Valid_data.zip" elementType="HTTPFileArg">
-                <stringProp name="File.path">/Users/a.khettar/GIT-HUB/nlm-validation/validation-test/jmeter/Valid_data.zip</stringProp>
-                <stringProp name="File.paramname"></stringProp>
-                <stringProp name="File.mimetype"></stringProp>
-              </elementProp>
-            </collectionProp>
-          </elementProp>
           <boolProp name="HTTPSampler.monitor">false</boolProp>
           <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
         </HTTPSamplerProxy>
@@ -127,6 +156,15 @@
           </objProp>
           <stringProp name="filename"></stringProp>
         </ResultCollector>
+        <hashTree/>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Content-Type</stringProp>
+              <stringProp name="Header.value">text/xml</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
         <hashTree/>
       </hashTree>
     </hashTree>

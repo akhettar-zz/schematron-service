@@ -1,17 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
   <name>validation-core</name>
   <comment>NO_M2ECLIPSE_SUPPORT: Project files created with the maven-eclipse-plugin are not supported in M2Eclipse.</comment>
-  <projects/>
+  <projects>
+    <project>validation-model</project>
+  </projects>
   <buildSpec>
-    <buildCommand>
-      <name>org.codehaus.groovy.eclipse.groovyBuilder</name>
-    </buildCommand>
     <buildCommand>
       <name>org.eclipse.jdt.core.javabuilder</name>
     </buildCommand>
   </buildSpec>
   <natures>
-    <nature>org.codehaus.groovy.eclipse.groovyNature</nature>
     <nature>org.eclipse.jdt.core.javanature</nature>
   </natures>
 </projectDescription>

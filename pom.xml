@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.nature.nlm.validation</groupId>
-	<artifactId>nlm-validation</artifactId>
+	<groupId>com.akhettar.validation</groupId>
+	<artifactId>xml-validation</artifactId>
 	<packaging>pom</packaging>
-	<name>NLM Validation</name>
-	<version>1.0.4</version>
+	<name>XML Validation</name>
+	<version>1.0.6</version>
 
 	<organization>
 		<name>Nature Publishing Group</name>
